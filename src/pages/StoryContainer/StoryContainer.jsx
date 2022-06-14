@@ -1,9 +1,9 @@
-import "./StoryContainer.scss";
 import { useNavigate } from "react-router";
+import "./StoryContainer.scss";
 
-import React, { useState } from "react";
-import StoryIntro from "../../components/StoryIntro/StoryIntro";
+import { useState } from "react";
 import Button from "../../components/Button/Button";
+import StoryIntro from "../../components/StoryIntro/StoryIntro";
 import storyData from "../../data/storyData";
 
 const StoryContainer = () => {

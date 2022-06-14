@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
@@ -7,12 +6,11 @@ import TextInput from "../../components/TextInput/TextInput";
 import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useContext, useState } from "react";
+import UserContext from "../../contexts/UserContext";
 import { auth } from "../../firebase";
 import { getUserById } from "../../utils/firebaseGameUtils";
 import { getArrayForSwing } from "../../utils/gameUtils";
-import { useState } from "react";
-import { useContext } from "react";
-import UserContext from "../../contexts/UserContext";
 
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");

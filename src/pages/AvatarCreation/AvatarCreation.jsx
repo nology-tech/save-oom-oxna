@@ -1,11 +1,10 @@
-import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import Button from "../../components/Button/Button";
-import "./AvatarCreation.scss";
 import TextInput from "../../components/TextInput/TextInput";
-import { useState } from "react";
 import avatarCreationData from "../../data/avatarCreationData";
-import { useNavigate } from "react-router-dom";
+import "./AvatarCreation.scss";
 
 const AvatarCreation = () => {
   //use state for container - which changes upon an index value that changes with button click - and if page is exited resets

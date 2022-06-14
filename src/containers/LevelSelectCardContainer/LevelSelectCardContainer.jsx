@@ -1,6 +1,5 @@
-import React from "react";
-import "./LevelSelectCardContainer.scss";
 import LevelSelectCard from "../../components/LevelSelectCard/LevelSelectCard";
+import "./LevelSelectCardContainer.scss";
 
 const LevelSelectCardContainer = ({ levelSelectData }) => {
   const cardContainerJsx = levelSelectData.map((card) => {

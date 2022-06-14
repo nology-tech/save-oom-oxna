@@ -1,8 +1,7 @@
+import { screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
 import "./NavBar";
 import NavBar from "./NavBar";
-import UserContext from "../../contexts/UserContext";
-import { customRender, customContextRender } from "../../utils/testUtils";
-import { screen } from "@testing-library/react";
 
 const userObj = {
   user: {

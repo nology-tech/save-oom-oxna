@@ -1,7 +1,7 @@
-import "./StatsPage.scss";
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
-import Graph from "../../components/Graph/Graph";
 import DropdownButton from "../../components/Dropdown/Dropdown";
+import Graph from "../../components/Graph/Graph";
+import "./StatsPage.scss";
 
 const StatsPage = () => {
   return (

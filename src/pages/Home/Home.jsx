@@ -3,20 +3,20 @@ import Layout from "../../components/Layout/Layout";
 import NavBar from "../../containers/navBar/NavBar";
 import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
 // import UserContext from "../../contexts/UserContext";
-import StoryContainer from "../StoryContainer/StoryContainer";
-import LevelSelectCardContainer from "../../containers/LevelSelectCardContainer/LevelSelectCardContainer";
+import { Route, Routes } from "react-router-dom";
 import GameInstructions from "../../components/GameInstructions/GameInstructions";
+import LevelSelectCardContainer from "../../containers/LevelSelectCardContainer/LevelSelectCardContainer";
+import levelSelectData from "../../data/levelSelectData";
 import StatsPage from "../../pages/StatsPage/StatsPage";
-import AvatarCreation from "../AvatarCreation/AvatarCreation";
-import "./Home.scss";
 import {
+  getArrayOfRounds,
   getCorrectGameRoundsForUser,
   getIncorrectGameRoundsForUser,
-  getArrayOfRounds,
 } from "../../utils/firebaseGameUtils";
-import { Route, Routes } from "react-router-dom";
-import levelSelectData from "../../data/levelSelectData";
+import AvatarCreation from "../AvatarCreation/AvatarCreation";
 import Dashboard from "../DashBoard/Dashboard";
+import StoryContainer from "../StoryContainer/StoryContainer";
+import "./Home.scss";
 //import { useNavigate } from 'react-router';
 //const loggedIn = false
 

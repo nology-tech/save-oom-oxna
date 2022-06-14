@@ -1,10 +1,10 @@
+import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import "./styles/main.scss";
+import UserContext from "./contexts/UserContext";
 import Home from "./pages/Home/Home";
 import LogIn from "./pages/LogIn/LogIn";
-import { useContext } from "react";
-import UserContext from "./contexts/UserContext";
 import Registration from "./pages/Registration/Registration";
+import "./styles/main.scss";
 const App = () => {
   const user = useContext(UserContext);
   console.log("userContext in App", user);

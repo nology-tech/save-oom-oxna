@@ -1,8 +1,7 @@
-import React from "react";
-import "./LevelSelectCard.scss";
-import NavBarHeading from "../navBarHeading/NavBarHeading";
-import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import NavBarHeading from "../navBarHeading/NavBarHeading";
+import "./LevelSelectCard.scss";
 
 const LevelSelectCard = ({
   headingText,

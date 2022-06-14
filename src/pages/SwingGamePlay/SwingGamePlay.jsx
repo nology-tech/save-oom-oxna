@@ -1,18 +1,18 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import shortid from "shortid";
 import swingingOom from "../../assets/images/Group 146swingingOom.png";
 import squirrel from "../../assets/images/squirrel.png";
 import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
-import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
 import PhonicComponent from "../../components/PhonicComponent/PhonicComponent";
+import Timer from "../../components/Timer/Timer";
+import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
+import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
+import UserContext from "../../contexts/UserContext";
 import phonicsData from "../../data/phonicsData";
+import { saveUserRound } from "../../utils/firebaseGameUtils";
+import { getArrayForSwing } from "../../utils/gameUtils";
 import GameEnd from "../GameEnd/GameEnd";
 import "./SwingGamePlay.scss";
-import Timer from "../../components/Timer/Timer";
-import shortid from "shortid";
-import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
-import { saveUserRound } from "../../utils/firebaseGameUtils";
-import UserContext from "../../contexts/UserContext";
-import { getArrayForSwing } from "../../utils/gameUtils";
 
 let gameScore = 0;
 const SwingGamePlay = () => {

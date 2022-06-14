@@ -1,16 +1,14 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import { act } from "react-dom/test-utils";
-import { Router } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import Registration from "./Registration";
 import { customRender } from "../../utils/testUtils";
-
-import UserContext from "../../contexts/UserContext";
+import Registration from "./Registration";
 
 const userFnctn = () => {
   console.log("Updates user context ");
 };
+
 const userObj = {
   user: {
     name: "Jack",
@@ -20,8 +18,8 @@ const userObj = {
 };
 
 it("Should render the Registration screen", async () => {
-  const history = createMemoryHistory();
-  await act(async () =>
+  createMemoryHistory();
+  act(async () =>
     customRender(<Registration />, true, { useContext: true, value: userObj })
   );
   const paragraph1 = screen.getByText(/This is the registration page/i);

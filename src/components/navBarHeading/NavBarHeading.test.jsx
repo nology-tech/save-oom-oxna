@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import NavBarHeading from "./NavBarHeading";
-import { customRender } from "../../utils/testUtils";
 import VectorLock from "../../assets/images/Vectorlock.png";
+import { customRender } from "../../utils/testUtils";
+import NavBarHeading from "./NavBarHeading";
 
 it("Should render the navbar header", () => {
   const { container } = customRender(

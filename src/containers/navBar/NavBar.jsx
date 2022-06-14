@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
+import { signOut } from "firebase/auth";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.scss";
-import NavBarHeading from "../../components/navBarHeading/NavBarHeading";
+import addImg from "../../assets/images/Vectoradd.png";
+import lockImg from "../../assets/images/Vectorlock.png";
+import statImg from "../../assets/images/Vectorstat.png";
 import vector from "../../assets/images/Vectorvector.png";
 import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
-import lockImg from "../../assets/images/Vectorlock.png";
-import statImg from "../../assets/images/Vectorstat.png";
-import addImg from "../../assets/images/Vectoradd.png";
+import NavBarHeading from "../../components/navBarHeading/NavBarHeading";
 import UserContext from "../../contexts/UserContext";
-import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
+import "./NavBar.scss";
 
 const NavBar = () => {
   let currentUserName;

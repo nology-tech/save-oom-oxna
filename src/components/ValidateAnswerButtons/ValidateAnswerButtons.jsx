@@ -1,7 +1,6 @@
-import React from "react";
-import "./ValidateAnswerButtons.scss";
 import cross from "../../assets/images/Cross.png";
 import tick from "../../assets/images/Tick.png";
+import "./ValidateAnswerButtons.scss";
 
 // add onClickEvent as a prop once buttons are being used
 const ValidateAnswerButtons = ({ handleCorrect, handleIncorrect }) => {

@@ -1,6 +1,6 @@
+import { screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
 import SwingGamePlay from "./SwingGamePlay";
-import { render, screen } from "@testing-library/react";
 
 const userFnctn = () => {
   console.log("Updates user context ");

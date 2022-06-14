@@ -1,9 +1,9 @@
 import phonicsData from "../data/phonicsData";
 import {
+  getArrayOfRounds,
   // getGameRoundsForUser,
   getCorrectGameRoundsForUser,
   getIncorrectGameRoundsForUser,
-  getArrayOfRounds,
 } from "./firebaseGameUtils";
 
 // const staticPhonicsArray = Object.keys(phonicsData.levelOne);

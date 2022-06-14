@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 
-import GameInstructions from "./GameInstructions";
 import Button from "../Button/Button";
+import GameInstructions from "./GameInstructions";
 
 it("Should render the game instructions", () => {
   render(<GameInstructions />);

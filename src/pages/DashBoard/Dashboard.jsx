@@ -1,10 +1,9 @@
-import React from "react";
+import battery20 from "../../assets/images/Battery-20.svg";
+import heart from "../../assets/images/Heart.svg";
+import smiley from "../../assets/images/Smiley.svg";
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import DashboardItem from "../../components/DashboardItem/DashboardItem";
 import "./Dashboard.scss";
-import smiley from "../../assets/images/Smiley.svg";
-import battery20 from "../../assets/images/Battery-20.svg";
-import heart from "../../assets/images/Heart.svg";
 
 const Dashboard = () => {
   return (

@@ -1,15 +1,15 @@
-import { db } from "../firebase";
 import {
   addDoc,
   collection,
   doc,
-  getDocs,
   getDoc,
-  query,
-  where,
+  getDocs,
   orderBy,
+  query,
   Timestamp,
+  where,
 } from "firebase/firestore";
+import { db } from "../firebase";
 
 /**
  * Gets a user object using the userId.

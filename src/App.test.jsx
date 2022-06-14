@@ -1,7 +1,7 @@
-import App from "./App";
 import { screen } from "@testing-library/react";
+import App from "./App";
 import { customRender } from "./utils/testUtils";
-import { BrowserRouter } from "react-router-dom";
+
 const userObj = {
   user: {
     name: "Jack",
@@ -18,6 +18,7 @@ it("Should land on the Login Page if user object null", () => {
   customRender(<App />, true, { useContext: true, value: nullObj });
   expect(screen.getByText(/Email/i)).toBeInTheDocument();
 });
+
 //If user is not null it will show main app
 it("Should land on App page if user object not null", () => {
   customRender(<App />, true, { useContext: true, value: userObj });

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Layout from "../../components/Layout/Layout";
 import Logo from "../../components/Logo/Logo";
-import { Link } from "react-router-dom";
 import TextInput from "../../components/TextInput/TextInput";
 import "./Registration.scss";
 //authentication imports
@@ -11,10 +11,10 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 // import { doc, setDoc } from "firebase/firestore";
-import { auth, createUser } from "../../firebase";
 import { useContext } from "react";
-import UserContext from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../../contexts/UserContext";
+import { auth, createUser } from "../../firebase";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");

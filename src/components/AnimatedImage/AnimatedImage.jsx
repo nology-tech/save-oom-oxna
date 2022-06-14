@@ -1,4 +1,3 @@
-import React from "react";
 import "./AnimatedImage.scss";
 
 const AnimatedImage = ({

@@ -1,6 +1,6 @@
-import Button from "./Button";
-import { customRender } from "../../utils/testUtils";
 import { render, screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
+import Button from "./Button";
 
 it("Should render the button", () => {
   const { container } = customRender(<Button />);
