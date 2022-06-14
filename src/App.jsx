@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import LogIn from "./pages/LogIn/LogIn";
 import Registration from "./pages/Registration/Registration";
 import "./styles/main.scss";
+
 const App = () => {
   const user = useContext(UserContext);
   console.log("userContext in App", user);

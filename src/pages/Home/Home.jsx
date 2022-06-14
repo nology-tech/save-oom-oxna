@@ -1,6 +1,6 @@
 // import React, { useEffect,useContext } from "react";
 import Layout from "../../components/Layout/Layout";
-import NavBar from "../../containers/navBar/NavBar";
+import NavBar from "../../containers/NavBar/NavBar";
 import SwingGamePlay from "../SwingGamePlay/SwingGamePlay";
 // import UserContext from "../../contexts/UserContext";
 import { Route, Routes } from "react-router-dom";
