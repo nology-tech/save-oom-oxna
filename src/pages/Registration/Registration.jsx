@@ -34,7 +34,7 @@ const Registration = () => {
     console.log("working");
     console.log(showValue);
     console.log(auth, firstName, registerEmail, registerPassword);
-    navigate("/avatarcreation");
+    navigate("/avatar-creation");
     const user = await createUserWithEmailAndPassword(
       auth,
       registerEmail,
@@ -48,59 +48,57 @@ const Registration = () => {
   };
 
   return (
-    <>
-      <Layout>
-        <div className="registration">
-          <div className="registration__image">
-            <Logo />
-          </div>
-          <form className="registration__container" onSubmit={register}>
-            <h1 className="registration__heading">Create your account</h1>
-            <p className="registration__top-text">
-              This is the registration page
-            </p>
-            <TextInput
-              className="registration__input"
-              labelText={"Child Name"}
-              onChangeEvent={(e) => {
-                setShowValue(e.target.value);
-                setFirstName(e.target.value);
-              }}
-              inputType="text"
-            />
-            <TextInput
-              className="registration__input"
-              labelText={"Email Address"}
-              onChangeEvent={(e) => {
-                setRegisterEmail(e.target.value);
-              }}
-              inputType="email"
-            />
-            <TextInput
-              className="registration__input"
-              labelText={"Password"}
-              onChangeEvent={(e) => {
-                setRegisterPassword(e.target.value);
-              }}
-              inputType="password"
-            />
-
-            <Button
-              className="registration__button"
-              buttonText={"Create your account"}
-              buttonStyle={"button-secondary"}
-              type="submit"
-            />
-            <p className="registration__bottom-text">
-              Already have an account?{" "}
-              <Link className="registration__link" to="/">
-                Sign in
-              </Link>
-            </p>
-          </form>
+    <Layout showNavbar={false}>
+      <div className="registration">
+        <div className="registration__image">
+          <Logo />
         </div>
-      </Layout>
-    </>
+        <form className="registration__container" onSubmit={register}>
+          <h1 className="registration__heading">Create your account</h1>
+          <p className="registration__top-text">
+            This is the registration page
+          </p>
+          <TextInput
+            className="registration__input"
+            labelText={"Child Name"}
+            onChangeEvent={(e) => {
+              setShowValue(e.target.value);
+              setFirstName(e.target.value);
+            }}
+            inputType="text"
+          />
+          <TextInput
+            className="registration__input"
+            labelText={"Email Address"}
+            onChangeEvent={(e) => {
+              setRegisterEmail(e.target.value);
+            }}
+            inputType="email"
+          />
+          <TextInput
+            className="registration__input"
+            labelText={"Password"}
+            onChangeEvent={(e) => {
+              setRegisterPassword(e.target.value);
+            }}
+            inputType="password"
+          />
+
+          <Button
+            className="registration__button"
+            buttonText={"Create your account"}
+            buttonStyle={"button-secondary"}
+            type="submit"
+          />
+          <p className="registration__bottom-text">
+            Already have an account?{" "}
+            <Link className="registration__link" to="/">
+              Sign in
+            </Link>
+          </p>
+        </form>
+      </div>
+    </Layout>
   );
 };
 

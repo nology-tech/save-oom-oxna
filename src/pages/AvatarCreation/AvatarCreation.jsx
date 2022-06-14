@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import Button from "../../components/Button/Button";
+import Layout from "../../components/Layout/Layout";
 import TextInput from "../../components/TextInput/TextInput";
 import avatarCreationData from "../../data/avatarCreationData";
 import "./AvatarCreation.scss";
@@ -30,20 +31,22 @@ const AvatarCreation = () => {
     avatarCreationData[count].title;
 
   return (
-    <div className="avatar-creation-container" role="ACC">
-      <AvatarHeading avatarHeadingText={headerText} role="avatar_heading" />
-      <div className="avatar-creation-container__text">
-        {/* {showText ? <TextInput /> : null} */}
-        {avatarCreationData[count].inputBox && (
-          <TextInput onChangeEvent={handleName} />
-        )}
+    <Layout>
+      <div className="avatar-creation-container" role="ACC">
+        <AvatarHeading avatarHeadingText={headerText} role="avatar_heading" />
+        <div className="avatar-creation-container__text">
+          {/* {showText ? <TextInput /> : null} */}
+          {avatarCreationData[count].inputBox && (
+            <TextInput onChangeEvent={handleName} />
+          )}
+        </div>
+        <Button
+          buttonStyle={"button-primary"}
+          buttonText={avatarCreationData[count].buttonText}
+          onClickEvent={increment}
+        />
       </div>
-      <Button
-        buttonStyle={"button-primary"}
-        buttonText={avatarCreationData[count].buttonText}
-        onClickEvent={increment}
-      />
-    </div>
+    </Layout>
   );
 };
 

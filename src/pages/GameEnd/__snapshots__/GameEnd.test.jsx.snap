@@ -24,7 +24,7 @@ exports[`Should render the Game End screen 1`] = `
         class="game-end__buttons"
       >
         <a
-          href="/level-select-card-container"
+          href="/level-select"
         >
           <button
             class="button-primary"

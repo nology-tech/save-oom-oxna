@@ -14,7 +14,7 @@ const GameEnd = ({ score, childName }) => {
         <p className="game-end__timer">Time&apos;s up</p>
         <AvatarHeading avatarHeadingText={"Amazing effort " + childName} />
         <div className="game-end__buttons">
-          <Link to="/level-select-card-container">
+          <Link to="/level-select">
             <Button
               buttonStyle={"button-primary"}
               buttonText={"Back to Home"}

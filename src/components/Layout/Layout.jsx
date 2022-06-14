@@ -1,7 +1,7 @@
 import NavBar from "../../containers/NavBar/NavBar";
 import "./Layout.scss";
 
-const Layout = ({ showNavbar = false, children }) => {
+const Layout = ({ showNavbar = true, children }) => {
   return (
     <div className="layout">
       {showNavbar && <NavBar />}

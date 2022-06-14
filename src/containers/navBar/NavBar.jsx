@@ -1,28 +1,26 @@
-import { signOut } from "firebase/auth";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { userLogout } from "../../api/userService";
 import addImg from "../../assets/images/Vectoradd.png";
 import lockImg from "../../assets/images/Vectorlock.png";
 import statImg from "../../assets/images/Vectorstat.png";
 import vector from "../../assets/images/Vectorvector.png";
-import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
 import NavBarHeading from "../../components/NavBarHeading/NavBarHeading";
 import UserContext from "../../contexts/UserContext";
-import { auth } from "../../firebase";
 import "./NavBar.scss";
 
 const NavBar = () => {
-  let currentUserName;
-  try {
-    const { user } = useContext(UserContext);
-    currentUserName = user.name;
-  } catch {
-    currentUserName = "";
-  }
+  const [userName, setUserName] = useState("Name not found");
+
+  const userContext = useContext(UserContext);
+
+  useEffect(() => {
+    userContext.user?.name && setUserName(userContext.user.name);
+  }, [userContext.user]);
 
   const logout = async () => {
-    await signOut(auth);
+    await userLogout(userContext);
   };
 
   return (
@@ -34,11 +32,11 @@ const NavBar = () => {
           headingImg={vector}
           headingStyle={"nav-bar"}
         />
-        <Link to="/swing-gamePlay">
+        <Link to="/swing-game">
           <h3>Swing game</h3>
         </Link>
         <h2>Introduction</h2>
-        <Link to={"/level-select-card-container"}>
+        <Link to={"/level-select"}>
           <NavBarHeading
             headingText={"Level 1"}
             headingImg={lockImg}
@@ -46,7 +44,7 @@ const NavBar = () => {
           />
         </Link>
 
-        <Link to={"/swing-gamePlay"}>
+        <Link to={"/swing-game"}>
           <NavBarHeading
             headingText={"Game Play"}
             headingImg={lockImg}
@@ -67,8 +65,8 @@ const NavBar = () => {
             headingStyle={"nav-bar"}
           />
         </Link>
-        <h2>{currentUserName}</h2>
-        <Link to={"/avatarcreation"}>
+        <h2>{userName}</h2>
+        <Link to={"/avatar-creation"}>
           <NavBarHeading
             headingText={"Add Avatar"}
             headingImg={addImg}
@@ -76,11 +74,9 @@ const NavBar = () => {
           />
         </Link>
       </div>
-      <Button
-        buttonText={"Logout"}
-        buttonStyle={"button-logout"}
-        onClickEvent={logout}
-      />
+      <Link className="button-logout" onClick={logout} to="/login">
+        Logout
+      </Link>
     </div>
   );
 };

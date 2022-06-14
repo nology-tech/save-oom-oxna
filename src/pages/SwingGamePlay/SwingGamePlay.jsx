@@ -3,6 +3,7 @@ import shortid from "shortid";
 import swingingOom from "../../assets/images/Group 146swingingOom.png";
 import squirrel from "../../assets/images/squirrel.png";
 import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
+import Layout from "../../components/Layout/Layout";
 import PhonicComponent from "../../components/PhonicComponent/PhonicComponent";
 import Timer from "../../components/Timer/Timer";
 import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
@@ -54,44 +55,35 @@ const SwingGamePlay = () => {
       .catch((e) => console.error("Error attempting to load phonics array", e));
   }, []);
 
-  const handleCorrect = () => {
+  const handleAnswer = async (correct) => {
     const currentPhonic = phonicsArray[gameState.index];
     let newGameState = { ...gameState };
-    newGameState.isCorrect = true;
+    newGameState.isCorrect = correct;
     setHintAnimation(false);
-    newGameState.score = newGameState.score + 1;
-    gameScore = newGameState.score;
-    newGameState.counter = newGameState.counter + 1;
-    newGameState.index = handleIndexChange();
-    setGameState(newGameState);
-    console.log(newGameState, gameState, "handleCorrect");
-    // save game results
-    saveUserRound(currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {
-        console.log("Saved user round - correct!");
-      })
-      .catch(() => {
-        console.error("Error attempting to save a user's round");
-      });
-  };
 
-  const handleIncorrect = () => {
-    const currentPhonic = phonicsArray[gameState.index];
-    let newGameState = { ...gameState };
-    newGameState.isCorrect = false;
-    setHintAnimation(false);
-    console.log(newGameState.isCorrect);
-    newGameState.index = newGameState.index + 1;
+    if (correct) {
+      newGameState.score = newGameState.score + 1;
+      gameScore = newGameState.score;
+      newGameState.counter = newGameState.counter + 1;
+      newGameState.index = handleIndexChange();
+    } else {
+      newGameState.index = newGameState.index + 1;
+    }
     setGameState(newGameState);
-    console.log(newGameState, gameState, "handleIncorrect");
+
     // save game results
-    saveUserRound(currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {
-        console.log("Saved user round - incorrect!");
-      })
-      .catch(() => {
-        console.error(`Error attempting to save a user ${currentUserId} round`);
-      });
+    try {
+      await saveUserRound(
+        currentUserId,
+        game,
+        level,
+        newGameState,
+        currentPhonic
+      );
+      console.log(`Saved user round - ${correct ? "" : "in"}correct!`);
+    } catch (e) {
+      console.error("Error attempting to save a user's round");
+    }
   };
 
   const handleHint = () => {
@@ -139,45 +131,44 @@ const SwingGamePlay = () => {
   ) : null;
 
   return (
-    <div className="swing-game-play">
-      {gameNotAvailable ? (
-        gameNotAvailableJsx
-      ) : (
-        <>
-          <OomsNeedsContainer />
-          <div className="swing-game-play__phonic">
-            <Timer startTime={60} handleGameEnd={handleGameEnd} />
-            <PhonicComponent phonicText={phonicsArray[gameState.index]} />
-          </div>
-
-          <div onClick={handleHint}>
+    <Layout>
+      <div className="swing-game-play">
+        {gameNotAvailable ? (
+          gameNotAvailableJsx
+        ) : (
+          <>
+            <OomsNeedsContainer />
+            <div className="swing-game-play__phonic">
+              <Timer startTime={60} handleGameEnd={handleGameEnd} />
+              <PhonicComponent phonicText={phonicsArray[gameState.index]} />
+            </div>
+            <div onClick={handleHint}>
+              <AnimatedImage
+                key={getId()}
+                imageToAnimate={squirrel}
+                animationClass={"animate__animated.animate__fastest"}
+                animationType={` ${squirrelAnimationType2}`}
+                imageStylesClass={"swing-game-play__squirrel"}
+              />
+            </div>
             <AnimatedImage
               key={getId()}
-              imageToAnimate={squirrel}
+              imageToAnimate={swingingOom}
               animationClass={"animate__animated.animate__fastest"}
-              animationType={` ${squirrelAnimationType2}`}
-              imageStylesClass={"swing-game-play__squirrel"}
+              animationType={oomAnimationType}
+              imageStylesClass={"swing-game-play__oom"}
             />
-          </div>
-          <AnimatedImage
-            key={getId()}
-            imageToAnimate={swingingOom}
-            animationClass={"animate__animated.animate__fastest"}
-            animationType={oomAnimationType}
-            imageStylesClass={"swing-game-play__oom"}
-          />
-
-          <ValidateAnswerButtons
-            handleCorrect={handleCorrect}
-            handleIncorrect={handleIncorrect}
-          />
-
-          <p className="swing-game-play__score">
-            Number Of Correct Sounds: {gameState.score}
-          </p>
-        </>
-      )}
-    </div>
+            <ValidateAnswerButtons
+              handleCorrect={() => handleAnswer(true)}
+              handleIncorrect={() => handleAnswer(false)}
+            />
+            <p className="swing-game-play__score">
+              Number Of Correct Sounds: {gameState.score}
+            </p>
+          </>
+        )}
+      </div>
+    </Layout>
   );
 };
 
