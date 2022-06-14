@@ -4,7 +4,7 @@ import GameInstructions from "./GameInstructions";
 import Button from "../Button/Button";
 
 it("Should render the game instructions", () => {
-  render(<GameInstructions/>);
+  render(<GameInstructions />);
 
   const paragraph1 = screen.getByRole("text");
 

@@ -31,7 +31,6 @@ export const auth = getAuth(app);
 // Reference the firestore DB
 export const db = getFirestore(app);
 
-
 export const getUsers = async (db) => {
   const usersCol = collection(db, "users");
   const usersSnapshot = await getDocs(usersCol);
@@ -51,10 +50,9 @@ export const getUserFromId = async (userId) => {
   return docSnap;
 };
 
-
 export const createUser = async (userId, key, value) => {
-  const docRef = doc(db, 'users', userId);
-   await setDoc(docRef, {
-   key: value
-  })
+  const docRef = doc(db, "users", userId);
+  await setDoc(docRef, {
+    key: value,
+  });
 };

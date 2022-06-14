@@ -1,5 +1,5 @@
 import "./StoryContainer.scss";
-import { useNavigate } from 'react-router';
+import { useNavigate } from "react-router";
 
 import React, { useState } from "react";
 import StoryIntro from "../../components/StoryIntro/StoryIntro";

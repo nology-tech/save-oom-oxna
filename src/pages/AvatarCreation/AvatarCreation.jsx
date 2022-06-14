@@ -18,27 +18,26 @@ const AvatarCreation = () => {
     if (count >= 2) {
       setCount(2);
       navigate("/story-container");
-    } 
-    else {
+    } else {
       setCount(count + 1);
     }
-    };
-    const handleName = (e) => {
-      setName(e.target.value)
-    }
+  };
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
 
-    const headerText = (avatarCreationData[count].appendName ? name: " " )+ avatarCreationData[count].title
-
-  
-
+  const headerText =
+    (avatarCreationData[count].appendName ? name : " ") +
+    avatarCreationData[count].title;
 
   return (
     <div className="avatar-creation-container" role="ACC">
-      <AvatarHeading avatarHeadingText={headerText} role="avatar_heading"/>
+      <AvatarHeading avatarHeadingText={headerText} role="avatar_heading" />
       <div className="avatar-creation-container__text">
-      {/* {showText ? <TextInput /> : null} */}
-      {avatarCreationData[count].inputBox  && <TextInput onChangeEvent={handleName}/> }
-
+        {/* {showText ? <TextInput /> : null} */}
+        {avatarCreationData[count].inputBox && (
+          <TextInput onChangeEvent={handleName} />
+        )}
       </div>
       <Button
         buttonStyle={"button-primary"}
@@ -50,4 +49,3 @@ const AvatarCreation = () => {
 };
 
 export default AvatarCreation;
-

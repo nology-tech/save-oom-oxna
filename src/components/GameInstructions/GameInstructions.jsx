@@ -8,8 +8,8 @@ const GameInstructions = () => {
       <h1 className="gameInstructions__heading">HOW TO PLAY</h1>
       <ul className="gameInstructions__text">
         <li>
-          A phoneme will appear on the screeen and the child will have
-          to say the sound of the phoneme shown
+          A phoneme will appear on the screeen and the child will have to say
+          the sound of the phoneme shown
         </li>
         <li>
           If the sound is said correctly, click the green button at the bottom

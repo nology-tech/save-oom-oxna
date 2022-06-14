@@ -18,9 +18,9 @@ const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [showValue, setShowValue] = useState("");
-  const userContext = useContext(UserContext)
+  const userContext = useContext(UserContext);
 
-  console.log("UserContext", userContext)
+  console.log("UserContext", userContext);
   const login = async (e) => {
     e.preventDefault();
     console.log(showValue);
@@ -32,28 +32,29 @@ const LogIn = () => {
         loginPassword
       );
       const fbUser = await getUserById(authUser.user.uid);
-      console.log("authenticated user", authUser)
+      console.log("authenticated user", authUser);
       const currentUser = {
         userId: authUser.user.uid,
-        name: fbUser.data() && fbUser.data().name ? fbUser.data().name : authUser.user.email 
-      }
-      console.log("currentUser", currentUser)
-      console.log("fbUser", fbUser.data())
+        name:
+          fbUser.data() && fbUser.data().name
+            ? fbUser.data().name
+            : authUser.user.email,
+      };
+      console.log("currentUser", currentUser);
+      console.log("fbUser", fbUser.data());
 
       const staticArray = await getArrayForSwing(currentUser.userId, 1);
-      console.log("array for using in game", staticArray)
+      console.log("array for using in game", staticArray);
 
       // finally. set the userContext
-      userContext.setUser(currentUser)
+      userContext.setUser(currentUser);
       console.log("userContext, after setting context", userContext);
-
     } catch (error) {
       console.error("Error attempting to authenticate user", error.message);
     }
   };
-  
-  return (
 
+  return (
     <>
       <Layout>
         <div className="log-in">
@@ -96,9 +97,7 @@ const LogIn = () => {
         </div>
       </Layout>
     </>
-
   );
 };
 
 export default LogIn;
-

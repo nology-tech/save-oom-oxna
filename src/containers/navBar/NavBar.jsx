@@ -39,41 +39,41 @@ const NavBar = () => {
         </Link>
         <h2>Introduction</h2>
         <Link to={"/level-select-card-container"}>
-        <NavBarHeading
-          headingText={"Level 1"}
-          headingImg={lockImg}
-          headingStyle={"nav-bar"}
-        />
+          <NavBarHeading
+            headingText={"Level 1"}
+            headingImg={lockImg}
+            headingStyle={"nav-bar"}
+          />
         </Link>
 
         <Link to={"/swing-gamePlay"}>
-        <NavBarHeading
-          headingText={"Game Play"}
-          headingImg={lockImg}
-          headingStyle={"nav-bar"}
-        />
+          <NavBarHeading
+            headingText={"Game Play"}
+            headingImg={lockImg}
+            headingStyle={"nav-bar"}
+          />
         </Link>
         <Link to={"/dashboard"}>
-        <NavBarHeading
-          headingText={"Dashboard"}
-          headingImg={lockImg}
-          headingStyle={"nav-bar"}
-        />
+          <NavBarHeading
+            headingText={"Dashboard"}
+            headingImg={lockImg}
+            headingStyle={"nav-bar"}
+          />
         </Link>
         <Link to={"/stats-page"}>
-        <NavBarHeading
-          headingText={"Stats"}
-          headingImg={statImg}
-          headingStyle={"nav-bar"}
-        />
+          <NavBarHeading
+            headingText={"Stats"}
+            headingImg={statImg}
+            headingStyle={"nav-bar"}
+          />
         </Link>
         <h2>{currentUserName}</h2>
         <Link to={"/avatarcreation"}>
-        <NavBarHeading
-          headingText={"Add Avatar"}
-          headingImg={addImg}
-          headingStyle={"nav-bar"}
-        />
+          <NavBarHeading
+            headingText={"Add Avatar"}
+            headingImg={addImg}
+            headingStyle={"nav-bar"}
+          />
         </Link>
       </div>
       <Button

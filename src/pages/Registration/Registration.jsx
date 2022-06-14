@@ -20,14 +20,14 @@ const Registration = () => {
   const [firstName, setFirstName] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
-  const userContext  = useContext(UserContext)
+  const userContext = useContext(UserContext);
   const [user, setUser] = useState({});
   const [showValue, setShowValue] = useState("");
   let navigate = useNavigate();
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
-    userContext.setUser(user)
+    userContext.setUser(user);
   });
 
   const register = async (e) => {
@@ -35,21 +35,18 @@ const Registration = () => {
     console.log("working");
     console.log(showValue);
     console.log(auth, firstName, registerEmail, registerPassword);
-    navigate('/avatarcreation');
+    navigate("/avatarcreation");
     const user = await createUserWithEmailAndPassword(
       auth,
       registerEmail,
       registerPassword
-    )
-    await createUser(user.user.uid, "parentName", firstName)
-    setUser(
-      {
-        parentName: firstName,
-        userId: user.user.uid,
-      }
-    ) 
+    );
+    await createUser(user.user.uid, "parentName", firstName);
+    setUser({
+      parentName: firstName,
+      userId: user.user.uid,
+    });
   };
-
 
   return (
     <>

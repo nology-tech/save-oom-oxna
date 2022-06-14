@@ -9,7 +9,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "GET STARTED",
     buttonStyle: "button-secondary",
-    path: "/story-container"
+    path: "/story-container",
   },
   {
     heading: "LEVEL 1",
@@ -19,7 +19,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: "/swing-game-play"
+    path: "/swing-game-play",
   },
   {
     heading: "LEVEL 2",
@@ -29,7 +29,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 3",
@@ -39,7 +39,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 4",
@@ -49,7 +49,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 5",
@@ -59,7 +59,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 6",
@@ -69,7 +69,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 7",
@@ -79,7 +79,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
   {
     heading: "LEVEL 8",
@@ -89,7 +89,7 @@ const levelSelectData = [
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonText: "LET’S PLAY",
     buttonStyle: "button-levels",
-    path: ""
+    path: "",
   },
 ];
 

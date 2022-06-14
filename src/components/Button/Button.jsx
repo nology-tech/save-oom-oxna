@@ -1,7 +1,14 @@
 import React from "react";
 import "./Button.scss";
 
-const Button = ({ buttonText, buttonStyle, onClickEvent, type, name, onSubmit }) => {
+const Button = ({
+  buttonText,
+  buttonStyle,
+  onClickEvent,
+  type,
+  name,
+  onSubmit,
+}) => {
   return (
     <button
       className={buttonStyle}

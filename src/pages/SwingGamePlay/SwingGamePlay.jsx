@@ -10,13 +10,12 @@ import "./SwingGamePlay.scss";
 import Timer from "../../components/Timer/Timer";
 import shortid from "shortid";
 import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
-import {saveUserRound} from "../../utils/firebaseGameUtils";
+import { saveUserRound } from "../../utils/firebaseGameUtils";
 import UserContext from "../../contexts/UserContext";
-import {getArrayForSwing} from "../../utils/gameUtils";
+import { getArrayForSwing } from "../../utils/gameUtils";
 
 let gameScore = 0;
 const SwingGamePlay = () => {
-
   const game = "swing";
   // should become props?
   const level = 1;
@@ -27,7 +26,6 @@ const SwingGamePlay = () => {
     const { user } = useContext(UserContext);
     currentUserName = user.name;
     currentUserId = user.userId;
-
   } catch (e) {
     console.error("Error attempting to get userContext!", e);
   }
@@ -44,19 +42,17 @@ const SwingGamePlay = () => {
   const [hintAnimation, setHintAnimation] = useState(false);
   const [phonicsArray, setPhonicsArray] = useState([]);
 
-  // load up the Phonics array 
+  // load up the Phonics array
   useEffect(() => {
     getArrayForSwing(currentUserId, 1)
-      .then( array => {
-          let newGameState = { ...gameState };
-          newGameState.isGameReady = true;
-          setGameState(newGameState);
-          setPhonicsArray(array);
-      
-    })
-    .catch((e) => console.error("Error attempting to load phonics array", e));
-
-  }, []  );
+      .then((array) => {
+        let newGameState = { ...gameState };
+        newGameState.isGameReady = true;
+        setGameState(newGameState);
+        setPhonicsArray(array);
+      })
+      .catch((e) => console.error("Error attempting to load phonics array", e));
+  }, []);
 
   const handleCorrect = () => {
     const currentPhonic = phonicsArray[gameState.index];
@@ -70,9 +66,13 @@ const SwingGamePlay = () => {
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleCorrect");
     // save game results
-    saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {console.log("Saved user round - correct!")})
-      .catch(() => {console.error("Error attempting to save a user's round")});
+    saveUserRound(currentUserId, game, level, newGameState, currentPhonic)
+      .then(() => {
+        console.log("Saved user round - correct!");
+      })
+      .catch(() => {
+        console.error("Error attempting to save a user's round");
+      });
   };
 
   const handleIncorrect = () => {
@@ -85,9 +85,13 @@ const SwingGamePlay = () => {
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleIncorrect");
     // save game results
-    saveUserRound( currentUserId, game, level, newGameState, currentPhonic)
-      .then(() => {console.log("Saved user round - incorrect!")})
-      .catch(() => {console.error(`Error attempting to save a user ${currentUserId} round`)});
+    saveUserRound(currentUserId, game, level, newGameState, currentPhonic)
+      .then(() => {
+        console.log("Saved user round - incorrect!");
+      })
+      .catch(() => {
+        console.error(`Error attempting to save a user ${currentUserId} round`);
+      });
   };
 
   const handleHint = () => {
@@ -115,7 +119,7 @@ const SwingGamePlay = () => {
     let newGameState = { ...gameState };
     newGameState.isGameOver = true;
     setGameState(newGameState);
-    console.log(newGameState, gameState, 'handleGameEnd');
+    console.log(newGameState, gameState, "handleGameEnd");
   };
 
   const getId = () => {
@@ -124,14 +128,15 @@ const SwingGamePlay = () => {
     return id;
   };
 
-  const squirrelAnimationType2 = hintAnimation ? 'animate__bounce' : '';
-  const oomAnimationType = gameState.isCorrect ? 'animate__swinging' : '';
+  const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
+  const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
 
-  const gameNotAvailable = ! gameState.isGameReady || gameState.isGameOver;
-  const gameNotAvailableJsx = gameState.isGameOver ? 
-      <GameEnd score={gameScore} childName={currentUserName} /> :
-          gameState.isGameReady == false ?
-            <p>Nothing!</p> : null;
+  const gameNotAvailable = !gameState.isGameReady || gameState.isGameOver;
+  const gameNotAvailableJsx = gameState.isGameOver ? (
+    <GameEnd score={gameScore} childName={currentUserName} />
+  ) : gameState.isGameReady == false ? (
+    <p>Nothing!</p>
+  ) : null;
 
   return (
     <div className="swing-game-play">
@@ -140,7 +145,7 @@ const SwingGamePlay = () => {
       ) : (
         <>
           <OomsNeedsContainer />
-          <div className='swing-game-play__phonic'>
+          <div className="swing-game-play__phonic">
             <Timer startTime={60} handleGameEnd={handleGameEnd} />
             <PhonicComponent phonicText={phonicsArray[gameState.index]} />
           </div>
@@ -149,17 +154,17 @@ const SwingGamePlay = () => {
             <AnimatedImage
               key={getId()}
               imageToAnimate={squirrel}
-              animationClass={'animate__animated.animate__fastest'}
+              animationClass={"animate__animated.animate__fastest"}
               animationType={` ${squirrelAnimationType2}`}
-              imageStylesClass={'swing-game-play__squirrel'}
+              imageStylesClass={"swing-game-play__squirrel"}
             />
           </div>
           <AnimatedImage
             key={getId()}
             imageToAnimate={swingingOom}
-            animationClass={'animate__animated.animate__fastest'}
+            animationClass={"animate__animated.animate__fastest"}
             animationType={oomAnimationType}
-            imageStylesClass={'swing-game-play__oom'}
+            imageStylesClass={"swing-game-play__oom"}
           />
 
           <ValidateAnswerButtons
@@ -167,7 +172,7 @@ const SwingGamePlay = () => {
             handleIncorrect={handleIncorrect}
           />
 
-          <p className='swing-game-play__score'>
+          <p className="swing-game-play__score">
             Number Of Correct Sounds: {gameState.score}
           </p>
         </>
