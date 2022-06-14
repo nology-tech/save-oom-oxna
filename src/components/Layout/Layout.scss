@@ -5,4 +5,11 @@
   width: 100vw;
   height: 100vh;
   background-color: $color-secondary-dark;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .layout__main {
+    flex: 1;
+    padding: 1rem 2rem;
+  }
 }

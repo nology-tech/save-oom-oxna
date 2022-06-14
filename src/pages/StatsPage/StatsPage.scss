@@ -1,64 +1,34 @@
 @use "../../styles/_variables.scss" as *;
 
 .stats-page {
-  background-color: $color-secondary-dark;
+  max-width: 1250px;
 
-  &__top-line {
+  .stats-page__top-line {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1rem;
-    margin-left: 3rem;
   }
 
-  &__heading {
-    margin: 1rem;
-  }
-
-  &__buttons {
-    width: 35%;
+  .stats-page__buttons {
     display: flex;
     justify-content: space-evenly;
+    gap: 2rem;
   }
 
-  &__score-graph {
-    margin-top: 1rem;
-    margin-left: 3rem;
-    padding: 1rem;
-    width: 35rem;
-    height: 18rem;
-    background-color: $color-secondary-light;
+  .stats-page__container {
+    .stats-page__score-graph,
+    .stats-page__correct-phonemes {
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: $color-secondary-light;
+    }
+
+    .stats-page__correct-phonemes {
+      li {
+        color: $color-white;
+        list-style: none;
+        margin: 0.5rem;
+      }
+    }
   }
-
-  &__correct-phonemes {
-    margin-top: 1rem;
-    margin-left: 3rem;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    width: 56rem;
-    height: 13rem;
-    background-color: $color-secondary-light;
-  }
-
-  &__buttons-name {
-    background-color: black;
-    border: 1px solid $color-accent;
-  }
-}
-
-li {
-  float: left;
-  color: $color-white;
-  list-style: none;
-  margin: 0.5rem;
-}
-
-h2 {
-  color: $color-white;
-}
-
-.stats-page__button-level {
-  background-color: black;
-  border: 1px solid $color-accent;
 }

@@ -5,8 +5,6 @@
   width: 35rem;
   height: max-content;
   background-color: transparent;
-  margin-left: auto;
-  margin-right: auto;
 
   &__text {
     font-family: $font-secondary;
@@ -22,13 +20,7 @@
 }
 
 .dropdown-heading {
-  width: 35rem;
-  height: max-content;
-  background-color: transparent;
-  font-family: $font-secondary;
-  color: $color-primary;
   font-size: 4rem;
-  text-align: left;
   line-height: 4rem;
   letter-spacing: 0.02em;
 }
