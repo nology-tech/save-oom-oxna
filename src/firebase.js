@@ -1,7 +1,5 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
 import {
   collection,
   doc,
@@ -11,16 +9,14 @@ import {
   setDoc,
 } from "firebase/firestore";
 
-import { getAuth } from "firebase/auth";
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCqhYYEw7VG5s1mnwvwzQpNX94KC4GJQ0",
-  authDomain: "save-oom.firebaseapp.com",
-  projectId: "save-oom",
-  storageBucket: "save-oom.appspot.com",
-  messagingSenderId: "874113879773",
-  appId: "1:874113879773:web:863830a75d85fe5b2ed534",
+  apiKey: "AIzaSyDXpJPVKepT1YpgVHSqndLGKBm6yWl0yFc",
+  authDomain: "save-oom-oxna.firebaseapp.com",
+  projectId: "save-oom-oxna",
+  storageBucket: "save-oom-oxna.appspot.com",
+  messagingSenderId: "323575125763",
+  appId: "1:323575125763:web:0261a180e32421b9663b36",
 };
 
 // Initialize Firebase
