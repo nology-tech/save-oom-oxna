@@ -10,8 +10,7 @@
 
   .level-select__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     padding: 2rem;
     gap: 3rem;
     width: 100%;
