@@ -51,41 +51,32 @@ const Registration = () => {
   return (
     <Layout showNavbar={false}>
       <div className="registration">
-        <div className="registration__image">
-          <Logo />
-        </div>
-        <form className="registration__container" onSubmit={handleRegister}>
+        <Logo />
+        <form className="registration__form" onSubmit={handleRegister}>
           <h1 className="registration__heading">Create your account</h1>
-          <p className="registration__top-text">
-            This is the registration page
-          </p>
           <TextInput
-            className="registration__input"
             labelText="Child Name"
             onChangeEvent={handleUpdateFirstName}
             inputType="text"
           />
           <TextInput
-            className="registration__input"
             labelText="Email Address"
             onChangeEvent={handleUpdateEmail}
             inputType="email"
           />
           <TextInput
-            className="registration__input"
             labelText="Password"
             onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
           <Button
-            className="registration__button"
             buttonText="Create your account"
-            buttonStyle={"button-secondary"}
+            buttonStyle="button-secondary"
             type="submit"
           />
           <p className="registration__bottom-text">
             Already have an account?{" "}
-            <Link className="registration__link" to="/">
+            <Link to="/" className="registration__log-in-link">
               Sign in
             </Link>
           </p>

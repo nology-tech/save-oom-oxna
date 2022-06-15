@@ -46,28 +46,22 @@ const LogIn = () => {
   return (
     <Layout showNavbar={false}>
       <div className="log-in">
-        <div className="log-in__image">
-          <Logo />
-        </div>
-        <form className="log-in__container" onSubmit={login}>
+        <Logo />
+        <form className="log-in__form" onSubmit={login}>
           <h1 className="log-in__heading">Welcome!</h1>
-          <p className="log-in__top-text">This is the log in page</p>
           <TextInput
-            className="log-in__input"
-            labelText={"Email"}
+            labelText="Email"
             onChangeEvent={handleUpdateEmail}
             inputType="email"
           />
           <TextInput
-            className="log-in__input"
-            labelText={"Password"}
+            labelText="Password"
             onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
           <Button
-            className="log-in__button"
-            buttonText={"Log in"}
-            buttonStyle={"button-secondary"}
+            buttonText="Log in"
+            buttonStyle="button-secondary"
             type="submit"
           />
           <p className="log-in__bottom-text">

@@ -8,14 +8,14 @@ const TextInput = ({
   value,
 }) => {
   return (
-    <div className="text-input-container">
-      <label htmlFor={inputName} className="text-input-container__label">
+    <div className="text-input">
+      <label htmlFor={inputName} className="text-input__label">
         {labelText}
       </label>
       <input
         type={inputType}
         name={inputName}
-        className="text-input-container__input"
+        className="text-input__input"
         value={value}
         onChange={onChangeEvent}
         required

@@ -1,34 +1,24 @@
 @use "../../styles/reset.scss" as *;
 @use "../../styles/variables.scss" as *;
 
-.text-input-container {
+.text-input {
   display: grid;
-  grid-template-columns: 25vw;
-  margin: 0px 5px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 3px;
-  width: max-content;
-  background-color: transparent;
-  * {
-    margin: 5px;
+
+  .text-input__label,
+  .text-input__input {
     color: $color-white;
     background-color: transparent;
   }
-  &__label {
-    width: 144px;
-    height: 19px;
+
+  .text-input__label {
     font-family: $font-secondary;
-    font-weight: 300;
-    font-size: 1rem;
   }
-  &__input {
-    width: 339px;
-    height: 55px;
+
+  .text-input__input {
+    min-width: 21.188rem;
+    padding: 2ch;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     border: 1px solid $color-border;
-    padding-left: 2ch;
-    padding-right: 2ch;
   }
 }
