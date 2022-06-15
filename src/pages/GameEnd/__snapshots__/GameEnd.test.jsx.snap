@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the Game End screen 1`] = `
+exports[`Should render the GameEnd page 1`] = `
 <div>
   <div
     class="game-end"

@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import GameInstructions from "./components/GameInstructions/GameInstructions";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import GameEnd from "./pages/GameEnd/GameEnd";
 import LevelSelect from "./pages/LevelSelect/LevelSelect";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
@@ -29,6 +30,8 @@ const App = () => (
     {/* ISSUES */}
     {/* never used, is not a page component */}
     <Route path="/game-instructions" element={<GameInstructions />} />
+
+    <Route path="/end-game" element={<GameEnd />} />
 
     {/* REDIRECTS */}
     <Route path="*" element={<Navigate to="/login" replace />} />

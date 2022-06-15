@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
-import Button from "../../components/Button/Button";
+import { customRender } from "../../utils/testUtils";
+import Login from "./Login";
 
-it("Should display the button with the text - log in", () => {
-  render(<Button label="Log in" />);
-  const paragraph1 = screen.getByText(/Log in/i);
-  expect(paragraph1).toBeInTheDocument();
+it("Should render the Login page", () => {
+  const { container } = customRender(<Login />);
+
+  expect(container).toMatchSnapshot();
 });

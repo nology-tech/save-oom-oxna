@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Dashboard page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div
+        class="nav-bar__section"
+      >
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="Logo image"
+            class="logo__image"
+            src="logo.png"
+          />
+        </a>
+        <a
+          href="/swing-game"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Swing Game
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/dashboard"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Dashboard
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/stats-page"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Stats
+            </h2>
+          </div>
+        </a>
+        <h2 />
+      </div>
+      <button
+        class="button-logout"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="dashboard"
+      >
+        <div
+          class="dashboard__heading"
+        >
+          <div
+            class="avatar-heading"
+          >
+            <h1>
+              DASHBOARD
+            </h1>
+          </div>
+        </div>
+        <div
+          class="dashboard__contents"
+        >
+          <div
+            class="dashboard-item"
+          >
+            <img
+              alt="Energy Level"
+              src="Smiley.svg"
+            />
+            <div>
+              <h2
+                class="dashboard-item__heading"
+              >
+                Energy Level
+              </h2>
+              <p
+                class="dashboard-item__paragraph"
+              >
+                This is OOM's current energy level. Take regular breaks from playing to allow OOM to recover. 
+              </p>
+            </div>
+          </div>
+          <div
+            class="dashboard-item"
+          >
+            <img
+              alt="Fuel Level"
+              src="Battery-20.svg"
+            />
+            <div>
+              <h2
+                class="dashboard-item__heading"
+              >
+                Fuel Level
+              </h2>
+              <p
+                class="dashboard-item__paragraph"
+              >
+                Oom's spaceship lost all its fuel on its collision with earth. Re-fill this to a 100% to get oom safely back home!! 
+              </p>
+            </div>
+          </div>
+          <div
+            class="dashboard-item"
+          >
+            <img
+              alt="Health Level"
+              src="Heart.svg"
+            />
+            <div>
+              <h2
+                class="dashboard-item__heading"
+              >
+                Health Level
+              </h2>
+              <p
+                class="dashboard-item__paragraph"
+              >
+                This is Oom's health status. Gain more health to make Oom land safely on Earth. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

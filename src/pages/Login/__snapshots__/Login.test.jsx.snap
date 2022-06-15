@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the Registration page 1`] = `
+exports[`Should render the Login page 1`] = `
 <div>
   <div
     class="layout"
@@ -9,7 +9,7 @@ exports[`Should render the Registration page 1`] = `
       class="layout__main"
     >
       <div
-        class="registration"
+        class="login"
       >
         <img
           alt="Logo image"
@@ -17,12 +17,12 @@ exports[`Should render the Registration page 1`] = `
           src="logo.png"
         />
         <form
-          class="registration__form"
+          class="login__form"
         >
           <h1
-            class="registration__heading"
+            class="login__heading"
           >
-            Create your account
+            Welcome!
           </h1>
           <div
             class="text-input"
@@ -30,22 +30,7 @@ exports[`Should render the Registration page 1`] = `
             <label
               class="text-input__label"
             >
-              Child Name
-            </label>
-            <input
-              class="text-input__input"
-              required=""
-              type="text"
-              value=""
-            />
-          </div>
-          <div
-            class="text-input"
-          >
-            <label
-              class="text-input__label"
-            >
-              Email Address
+              Email
             </label>
             <input
               class="text-input__input"
@@ -73,18 +58,18 @@ exports[`Should render the Registration page 1`] = `
             class="button-secondary"
             type="submit"
           >
-            Create your account
+            Log in
           </button>
           <p
-            class="registration__bottom-text"
+            class="login__bottom-text"
           >
-            Already have an account?
+            Don't have an Account?
              
             <a
-              class="registration__log-in-link"
-              href="/"
+              class="login__registration-link"
+              href="/registration"
             >
-              Sign in
+              Sign Up
             </a>
           </p>
         </form>

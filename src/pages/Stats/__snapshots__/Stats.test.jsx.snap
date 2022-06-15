@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the SwingGamePlay page 1`] = `
+exports[`Should render the Stats page 1`] = `
 <div>
   <div
     class="layout"
@@ -70,13 +70,65 @@ exports[`Should render the SwingGamePlay page 1`] = `
     <main
       class="layout__main"
     >
-      <div
-        class="swing-game-play"
+      <section
+        class="stats-page"
       >
-        <p>
-          Nothing!
-        </p>
-      </div>
+        <div
+          class="stats-page__top-line"
+        >
+          <div
+            class="avatar-heading"
+          >
+            <h1
+              class="dropdown-heading"
+            >
+              Stats for Jack
+            </h1>
+          </div>
+          <div
+            class="stats-page__buttons"
+          >
+            <span>
+              Dropdown #1
+            </span>
+            <span>
+              Dropdown #2
+            </span>
+          </div>
+        </div>
+        <div
+          class="stats-page__container"
+        >
+          <div
+            class="stats-page__score-graph"
+          >
+            <h2>
+              Score Over Time
+            </h2>
+            <div
+              role="graph"
+            />
+          </div>
+          <div
+            class="stats-page__correct-phonemes"
+          >
+            <h2>
+              Correct Phonemes
+            </h2>
+            <ul>
+              <li>
+                SH
+              </li>
+              <li>
+                EE
+              </li>
+              <li>
+                P
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </div>

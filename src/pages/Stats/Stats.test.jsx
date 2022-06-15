@@ -1,11 +1,8 @@
-import { screen } from "@testing-library/react";
-import StatsPage from "./StatsPage";
 import { customRender } from "../../utils/testUtils";
+import StatsPage from "./Stats";
 
-it("Should render the StatsPage screen", () => {
-  customRender(<StatsPage />);
+it("Should render the Stats page", () => {
+  const { container } = customRender(<StatsPage />);
 
-  const heading = screen.getByText(/Stats for/i);
-
-  expect(heading).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });

@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the LevelSelect page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div
+        class="nav-bar__section"
+      >
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="Logo image"
+            class="logo__image"
+            src="logo.png"
+          />
+        </a>
+        <a
+          href="/swing-game"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Swing Game
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/dashboard"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Dashboard
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/stats-page"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Stats
+            </h2>
+          </div>
+        </a>
+        <h2 />
+      </div>
+      <button
+        class="button-logout"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="level-select"
+      >
+        <h1
+          class="level-select__heading"
+        >
+           Levels
+        </h1>
+        <div
+          class="level-select__container"
+        >
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                INTRODUCTION
+              </h2>
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/story-container"
+              >
+                <button
+                  class="button-secondary"
+                >
+                  GET STARTED
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 1
+              </h2>
+              <img
+                alt="LEVEL 1"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/swing-game/play"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 2
+              </h2>
+              <img
+                alt="LEVEL 2"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 3
+              </h2>
+              <img
+                alt="LEVEL 3"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 4
+              </h2>
+              <img
+                alt="LEVEL 4"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 5
+              </h2>
+              <img
+                alt="LEVEL 5"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 6
+              </h2>
+              <img
+                alt="LEVEL 6"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 7
+              </h2>
+              <img
+                alt="LEVEL 7"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-header"
+            >
+              <h2
+                class="level-select-header__heading"
+              >
+                LEVEL 8
+              </h2>
+              <img
+                alt="LEVEL 8"
+                class="level-select-header__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button-levels"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

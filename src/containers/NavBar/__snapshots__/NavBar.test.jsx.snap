@@ -2,48 +2,20 @@
 
 exports[`Should render the navbar 1`] = `
 <div>
-  <div
+  <nav
     class="nav-bar"
   >
     <div
       class="nav-bar__section"
     >
-      <img
-        alt="Logo image"
-        class="logo__image"
-        src="logo.png"
-      />
-      <div
-        class="nav-bar-header"
-      >
-        <h2
-          class="nav-bar-header__heading"
-        >
-          Phonics stages
-        </h2>
-      </div>
       <a
-        href="/swing-game"
+        href="/dashboard"
       >
-        <h3>
-          Swing game
-        </h3>
-      </a>
-      <h2>
-        Introduction
-      </h2>
-      <a
-        href="/level-select"
-      >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Level 1
-          </h2>
-        </div>
+        <img
+          alt="Logo image"
+          class="logo__image"
+          src="logo.png"
+        />
       </a>
       <a
         href="/swing-game"
@@ -54,7 +26,7 @@ exports[`Should render the navbar 1`] = `
           <h2
             class="nav-bar-header__heading"
           >
-            Game Play
+            Swing Game
           </h2>
         </div>
       </a>
@@ -84,114 +56,13 @@ exports[`Should render the navbar 1`] = `
           </h2>
         </div>
       </a>
-      <h2>
-        Jack
-      </h2>
+      <h2 />
     </div>
-    <a
+    <button
       class="button-logout"
-      href="/login"
     >
       Logout
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Should render the navbar 2`] = `
-<div>
-  <div
-    class="nav-bar"
-  >
-    <div
-      class="nav-bar__section"
-    >
-      <img
-        alt="Logo image"
-        class="logo__image"
-        src="logo.png"
-      />
-      <div
-        class="nav-bar-header"
-      >
-        <h2
-          class="nav-bar-header__heading"
-        >
-          Phonics stages
-        </h2>
-      </div>
-      <a
-        href="/swing-game"
-      >
-        <h3>
-          Swing game
-        </h3>
-      </a>
-      <h2>
-        Introduction
-      </h2>
-      <a
-        href="/level-select"
-      >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Level 1
-          </h2>
-        </div>
-      </a>
-      <a
-        href="/swing-game"
-      >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Game Play
-          </h2>
-        </div>
-      </a>
-      <a
-        href="/dashboard"
-      >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Dashboard
-          </h2>
-        </div>
-      </a>
-      <a
-        href="/stats-page"
-      >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Stats
-          </h2>
-        </div>
-      </a>
-      <h2>
-        Jack
-      </h2>
-    </div>
-    <a
-      class="button-logout"
-      href="/login"
-    >
-      Logout
-    </a>
-  </div>
+    </button>
+  </nav>
 </div>
 `;
