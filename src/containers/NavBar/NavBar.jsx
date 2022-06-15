@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { userLogout } from "../../api/userService";
-import addImg from "../../assets/images/Vectoradd.png";
 import lockImg from "../../assets/images/Vectorlock.png";
 import statImg from "../../assets/images/Vectorstat.png";
 import vector from "../../assets/images/Vectorvector.png";
@@ -59,13 +58,6 @@ const NavBar = () => {
           />
         </Link>
         <h2>{user.name}</h2>
-        <Link to={"/avatar-creation"}>
-          <NavBarHeading
-            headingText={"Add Avatar"}
-            headingImg={addImg}
-            headingStyle={"nav-bar"}
-          />
-        </Link>
       </div>
       <Link className="button-logout" onClick={handleLogout} to="/login">
         Logout

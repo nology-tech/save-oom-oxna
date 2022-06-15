@@ -1,8 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import GameInstructions from "./components/GameInstructions/GameInstructions";
 import LevelSelectCardContainer from "./containers/LevelSelectCardContainer/LevelSelectCardContainer";
-import AvatarCreation from "./pages/AvatarCreation/AvatarCreation";
-import Dashboard from "./pages/DashBoard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import LogIn from "./pages/LogIn/LogIn";
 import Registration from "./pages/Registration/Registration";
 import StatsPage from "./pages/StatsPage/StatsPage";
@@ -24,7 +23,6 @@ const App = () => (
     <Route path="/story-container" element={<StoryContainer />} />
     <Route path="/level-select" element={<LevelSelectCardContainer />} />
     <Route path="/stats-page" element={<StatsPage />} />
-    <Route path="/avatar-creation" element={<AvatarCreation />} />
 
     {/* ISSUES */}
     {/* never used, is not a page component */}
