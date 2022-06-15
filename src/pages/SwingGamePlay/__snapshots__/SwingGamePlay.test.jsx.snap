@@ -3,11 +3,123 @@
 exports[`Should render the Swing Game Play screen 1`] = `
 <div>
   <div
-    class="swing-game-play"
+    class="layout"
   >
-    <p>
-      Nothing!
-    </p>
+    <div
+      class="nav-bar"
+    >
+      <div
+        class="nav-bar__section"
+      >
+        <img
+          alt="Logo image"
+          class="logo__image"
+          src="logo.png"
+        />
+        <div
+          class="nav-bar-header"
+        >
+          <h2
+            class="nav-bar-header__heading"
+          >
+            Phonics stages
+          </h2>
+        </div>
+        <a
+          href="/swing-game"
+        >
+          <h3>
+            Swing game
+          </h3>
+        </a>
+        <h2>
+          Introduction
+        </h2>
+        <a
+          href="/level-select"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Level 1
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/swing-game"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Game Play
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/dashboard"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Dashboard
+            </h2>
+          </div>
+        </a>
+        <a
+          href="/stats-page"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Stats
+            </h2>
+          </div>
+        </a>
+        <h2 />
+        <a
+          href="/avatar-creation"
+        >
+          <div
+            class="nav-bar-header"
+          >
+            <h2
+              class="nav-bar-header__heading"
+            >
+              Add Avatar
+            </h2>
+          </div>
+        </a>
+      </div>
+      <a
+        class="button-logout"
+        href="/login"
+      >
+        Logout
+      </a>
+    </div>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="swing-game-play"
+      >
+        <p>
+          Nothing!
+        </p>
+      </div>
+    </main>
   </div>
 </div>
 `;

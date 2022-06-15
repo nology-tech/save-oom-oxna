@@ -1,24 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import Dropdown from "../../components/Dropdown/Dropdown";
-import Graph from "../../components/Graph/Graph";
+import { screen } from "@testing-library/react";
 import StatsPage from "./StatsPage";
+import { customRender } from "../../utils/testUtils";
 
 it("Should render the StatsPage screen", () => {
-  render(<StatsPage />);
+  customRender(<StatsPage />);
 
   const heading = screen.getByText(/Stats for/i);
 
   expect(heading).toBeInTheDocument();
-});
-
-it("Should display the dropdown with the text -Level", () => {
-  render(<Dropdown option1="Level" />);
-  const text = screen.getByText(/Level/i);
-  expect(text).toBeInTheDocument();
-});
-
-it("Should display the graph", () => {
-  render(<Graph />);
-  const graph = screen.getByRole("graph");
-  expect(graph).toBeInTheDocument();
 });
