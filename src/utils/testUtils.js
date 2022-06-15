@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import UserContext from "../contexts/UserContext";
+import UserContext from "../context/UserContext";
 
 export const customRender = (
   ui,

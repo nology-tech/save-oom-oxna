@@ -8,7 +8,7 @@ import PhonicComponent from "../../components/PhonicComponent/PhonicComponent";
 import Timer from "../../components/Timer/Timer";
 import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
 import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
-import UserContext from "../../contexts/UserContext";
+import UserContext from "../../context/UserContext";
 import phonicsData from "../../data/phonicsData";
 import { saveUserRound } from "../../utils/firebaseGameUtils";
 import { getArrayForSwing } from "../../utils/gameUtils";

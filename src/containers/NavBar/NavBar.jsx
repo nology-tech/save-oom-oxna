@@ -7,7 +7,7 @@ import statImg from "../../assets/images/Vectorstat.png";
 import vector from "../../assets/images/Vectorvector.png";
 import Logo from "../../components/Logo/Logo";
 import NavBarHeading from "../../components/NavBarHeading/NavBarHeading";
-import UserContext from "../../contexts/UserContext";
+import UserContext from "../../context/UserContext";
 import "./NavBar.scss";
 
 const NavBar = () => {

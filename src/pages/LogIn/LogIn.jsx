@@ -7,7 +7,7 @@ import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useContext, useState } from "react";
-import UserContext from "../../contexts/UserContext";
+import UserContext from "../../context/UserContext";
 import { auth } from "../../firebase";
 import { getUserById } from "../../utils/firebaseGameUtils";
 import { getArrayForSwing } from "../../utils/gameUtils";

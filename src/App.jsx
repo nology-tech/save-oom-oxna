@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import GameInstructions from "./components/GameInstructions/GameInstructions";
 import LevelSelectCardContainer from "./containers/LevelSelectCardContainer/LevelSelectCardContainer";
-import UserContext from "./contexts/UserContext";
+import UserContext from "./context/UserContext";
 import AvatarCreation from "./pages/AvatarCreation/AvatarCreation";
 import Dashboard from "./pages/DashBoard/Dashboard";
 import LogIn from "./pages/LogIn/LogIn";
