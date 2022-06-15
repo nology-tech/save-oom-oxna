@@ -1,7 +1,7 @@
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import Graph from "../../components/Graph/Graph";
 import Layout from "../../components/Layout/Layout";
-import "./StatsPage.scss";
+import "./Stats.scss";
 
 const StatsPage = () => {
   return (
