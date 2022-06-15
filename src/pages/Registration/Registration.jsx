@@ -6,45 +6,46 @@ import Logo from "../../components/Logo/Logo";
 import TextInput from "../../components/TextInput/TextInput";
 import "./Registration.scss";
 //authentication imports
-import {
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-} from "firebase/auth";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerUser, setCurrentUser } from "../../api/userService";
 import UserContext from "../../context/UserContext";
-import { auth, createUser } from "../../firebase";
 
 const Registration = () => {
   const [firstName, setFirstName] = useState("");
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const userContext = useContext(UserContext);
-  const [user, setUser] = useState({});
-  const [showValue, setShowValue] = useState("");
-  let navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-    userContext.setUser(user);
-  });
+  const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  const register = async (e) => {
-    e.preventDefault();
-    console.log("working");
-    console.log(showValue);
-    console.log(auth, firstName, registerEmail, registerPassword);
-    navigate("/avatar-creation");
-    const user = await createUserWithEmailAndPassword(
-      auth,
-      registerEmail,
-      registerPassword
-    );
-    await createUser(user.user.uid, "parentName", firstName);
-    setUser({
-      parentName: firstName,
-      userId: user.user.uid,
+  const handleRegister = async (event) => {
+    event.preventDefault();
+
+    const isSuccess = await registerUser({
+      email,
+      password,
+      firstName,
     });
+
+    if (isSuccess) {
+      setCurrentUser(setUser);
+      navigate("/dashboard");
+    } else {
+      console.log("there was an error registering this user");
+    }
+  };
+
+  const handleUpdateFirstName = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const handleUpdateEmail = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleUpdatePassword = (event) => {
+    setPassword(event.target.value);
   };
 
   return (
@@ -53,40 +54,32 @@ const Registration = () => {
         <div className="registration__image">
           <Logo />
         </div>
-        <form className="registration__container" onSubmit={register}>
+        <form className="registration__container" onSubmit={handleRegister}>
           <h1 className="registration__heading">Create your account</h1>
           <p className="registration__top-text">
             This is the registration page
           </p>
           <TextInput
             className="registration__input"
-            labelText={"Child Name"}
-            onChangeEvent={(e) => {
-              setShowValue(e.target.value);
-              setFirstName(e.target.value);
-            }}
+            labelText="Child Name"
+            onChangeEvent={handleUpdateFirstName}
             inputType="text"
           />
           <TextInput
             className="registration__input"
-            labelText={"Email Address"}
-            onChangeEvent={(e) => {
-              setRegisterEmail(e.target.value);
-            }}
+            labelText="Email Address"
+            onChangeEvent={handleUpdateEmail}
             inputType="email"
           />
           <TextInput
             className="registration__input"
-            labelText={"Password"}
-            onChangeEvent={(e) => {
-              setRegisterPassword(e.target.value);
-            }}
+            labelText="Password"
+            onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
-
           <Button
             className="registration__button"
-            buttonText={"Create your account"}
+            buttonText="Create your account"
             buttonStyle={"button-secondary"}
             type="submit"
           />

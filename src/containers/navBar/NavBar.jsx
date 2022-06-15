@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { userLogout } from "../../api/userService";
 import addImg from "../../assets/images/Vectoradd.png";
@@ -11,16 +11,10 @@ import UserContext from "../../context/UserContext";
 import "./NavBar.scss";
 
 const NavBar = () => {
-  const [userName, setUserName] = useState("Name not found");
+  const { user, setUser } = useContext(UserContext);
 
-  const userContext = useContext(UserContext);
-
-  useEffect(() => {
-    userContext.user?.name && setUserName(userContext.user.name);
-  }, [userContext.user]);
-
-  const logout = async () => {
-    await userLogout(userContext);
+  const handleLogout = () => {
+    userLogout(setUser);
   };
 
   return (
@@ -43,7 +37,6 @@ const NavBar = () => {
             headingStyle={"nav-bar"}
           />
         </Link>
-
         <Link to={"/swing-game"}>
           <NavBarHeading
             headingText={"Game Play"}
@@ -65,7 +58,7 @@ const NavBar = () => {
             headingStyle={"nav-bar"}
           />
         </Link>
-        <h2>{userName}</h2>
+        <h2>{user.name}</h2>
         <Link to={"/avatar-creation"}>
           <NavBarHeading
             headingText={"Add Avatar"}
@@ -74,7 +67,7 @@ const NavBar = () => {
           />
         </Link>
       </div>
-      <Link className="button-logout" onClick={logout} to="/login">
+      <Link className="button-logout" onClick={handleLogout} to="/login">
         Logout
       </Link>
     </div>

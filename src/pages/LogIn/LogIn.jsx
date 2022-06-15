@@ -7,54 +7,40 @@ import "./LogIn.scss";
 //authentication imports
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useContext, useState } from "react";
+import { setCurrentUser } from "../../api/userService";
 import UserContext from "../../context/UserContext";
 import { auth } from "../../firebase";
-import { getUserById } from "../../utils/firebaseGameUtils";
-import { getArrayForSwing } from "../../utils/gameUtils";
 
 const LogIn = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  const [showValue, setShowValue] = useState("");
 
   const userContext = useContext(UserContext);
   const navigate = useNavigate();
 
-  console.log("UserContext", userContext);
-
-  const login = async (e) => {
-    e.preventDefault();
-    console.log(showValue);
+  const login = async (event) => {
+    event.preventDefault();
 
     try {
-      const authUser = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
-      const fbUser = await getUserById(authUser.user.uid);
-      console.log("authenticated user", authUser);
-      const currentUser = {
-        userId: authUser.user.uid,
-        name:
-          fbUser.data() && fbUser.data().name
-            ? fbUser.data().name
-            : authUser.user.email,
-      };
-      console.log("currentUser", currentUser);
-      console.log("fbUser", fbUser.data());
+      // sign in with firebase
+      await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
 
-      const staticArray = await getArrayForSwing(currentUser.userId, 1);
-      console.log("array for using in game", staticArray);
+      // update user context with logged in user
+      setCurrentUser(userContext.setUser);
 
-      // finally. set the userContext
-      userContext.setUser(currentUser);
-      console.log("userContext, after setting context", userContext);
-
+      //navigate to the dashboard
       navigate("/dashboard");
     } catch (error) {
       console.error("Error attempting to authenticate user", error.message);
     }
+  };
+
+  const handleUpdateEmail = (event) => {
+    setLoginEmail(event.target.value);
+  };
+
+  const handleUpdatePassword = (event) => {
+    setLoginPassword(event.target.value);
   };
 
   return (
@@ -69,18 +55,13 @@ const LogIn = () => {
           <TextInput
             className="log-in__input"
             labelText={"Email"}
-            onChangeEvent={(event) => {
-              setShowValue(event.target.value);
-              setLoginEmail(event.target.value);
-            }}
+            onChangeEvent={handleUpdateEmail}
             inputType="email"
           />
           <TextInput
             className="log-in__input"
             labelText={"Password"}
-            onChangeEvent={(event) => {
-              setLoginPassword(event.target.value);
-            }}
+            onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
           <Button
