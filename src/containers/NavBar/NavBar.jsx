@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { userLogout } from "../../api/userService";
 import lockImg from "../../assets/images/Vectorlock.png";
 import statImg from "../../assets/images/Vectorstat.png";
-import vector from "../../assets/images/Vectorvector.png";
+import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
 import NavBarHeading from "../../components/NavBarHeading/NavBarHeading";
 import UserContext from "../../context/UserContext";
@@ -11,34 +11,22 @@ import "./NavBar.scss";
 
 const NavBar = () => {
   const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     userLogout(setUser);
+    navigate("/login");
   };
 
   return (
-    <div className="nav-bar">
+    <nav className="nav-bar">
       <div className="nav-bar__section">
-        <Logo />
-        <NavBarHeading
-          headingText={"Phonics stages"}
-          headingImg={vector}
-          headingStyle={"nav-bar"}
-        />
-        <Link to="/swing-game">
-          <h3>Swing game</h3>
-        </Link>
-        <h2>Introduction</h2>
-        <Link to={"/level-select"}>
-          <NavBarHeading
-            headingText={"Level 1"}
-            headingImg={lockImg}
-            headingStyle={"nav-bar"}
-          />
+        <Link to="/dashboard">
+          <Logo />
         </Link>
         <Link to={"/swing-game"}>
           <NavBarHeading
-            headingText={"Game Play"}
+            headingText={"Swing Game"}
             headingImg={lockImg}
             headingStyle={"nav-bar"}
           />
@@ -59,10 +47,8 @@ const NavBar = () => {
         </Link>
         <h2>{user.name}</h2>
       </div>
-      <Link className="button-logout" onClick={handleLogout} to="/login">
-        Logout
-      </Link>
-    </div>
+      <Button className="button-logout" onClick={handleLogout} label="Logout" />
+    </nav>
   );
 };
 

@@ -70,8 +70,8 @@ const Registration = () => {
             inputType="password"
           />
           <Button
-            buttonText="Create your account"
-            buttonStyle="button-secondary"
+            label="Create your account"
+            className="button-secondary"
             type="submit"
           />
           <p className="registration__bottom-text">

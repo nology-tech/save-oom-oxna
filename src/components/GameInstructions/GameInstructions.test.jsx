@@ -11,7 +11,7 @@ it("Should render the game instructions", () => {
   expect(paragraph1).toBeInTheDocument();
 });
 it("Should display the button with the text - lets play", () => {
-  render(<Button buttonText="let's play" />);
+  render(<Button label="let's play" />);
   const paragraph1 = screen.getByText(/let's play/i);
   expect(paragraph1).toBeInTheDocument();
 });

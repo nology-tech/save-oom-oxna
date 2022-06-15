@@ -58,11 +58,7 @@ const LoginPage = () => {
             onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
-          <Button
-            buttonText="Log in"
-            buttonStyle="button-secondary"
-            type="submit"
-          />
+          <Button label="Log in" className="button-secondary" type="submit" />
           <p className="login__bottom-text">
             Don&apos;t have an Account?{" "}
             <Link to="/registration" className="login__registration-link">

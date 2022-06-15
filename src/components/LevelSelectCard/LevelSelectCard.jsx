@@ -4,27 +4,26 @@ import NavBarHeading from "../NavBarHeading/NavBarHeading";
 import "./LevelSelectCard.scss";
 
 const LevelSelectCard = ({
-  headingText,
+  heading,
   headingImg,
-  paragraphText,
-  buttonText,
-  buttonStyle,
+  paragraph,
+  buttonLabel,
+  buttonClassName,
   isLocked,
   path,
 }) => {
   return (
     <div className="level-select-card">
       <NavBarHeading
-        headingText={headingText}
+        headingText={heading}
         headingImg={headingImg}
         headingStyle={"level-select"}
         isLocked={isLocked}
       />
-      {/* <h3 className='card__heading'>{headingText}</h3> */}
-      <p className="level-select-card__text">{paragraphText}</p>
+      <p className="level-select-card__text">{paragraph}</p>
       <div className="level-select-card__button">
         <Link to={path}>
-          <Button buttonStyle={buttonStyle} buttonText={buttonText} />
+          <Button className={buttonClassName} label={buttonLabel} />
         </Link>
       </div>
     </div>

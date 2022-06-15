@@ -24,9 +24,9 @@ const StoryContainer = () => {
       <div className="story__container">
         <StoryIntro text={storyData[counter].story} />
         <Button
-          buttonStyle={"button-primary"}
-          buttonText={"NEXT"}
-          onClickEvent={handleIncrement}
+          className={"button-primary"}
+          label={"NEXT"}
+          onClick={handleIncrement}
         />
       </div>
     </Layout>

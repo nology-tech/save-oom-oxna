@@ -7,8 +7,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "GET STARTED",
-    buttonStyle: "button-secondary",
+    buttonLabel: "GET STARTED",
+    buttonClassName: "button-secondary",
     path: "/story-container",
   },
   {
@@ -17,9 +17,9 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
-    path: "/swing-game",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
+    path: "/swing-game/play",
   },
   {
     heading: "LEVEL 2",
@@ -27,8 +27,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -37,8 +37,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -47,8 +47,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -57,8 +57,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -67,8 +67,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -77,8 +77,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
   {
@@ -87,8 +87,8 @@ const levelSelectData = [
     headingImg: lockImage,
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
-    buttonText: "LET’S PLAY",
-    buttonStyle: "button-levels",
+    buttonLabel: "LET’S PLAY",
+    buttonClassName: "button-levels",
     path: "",
   },
 ];

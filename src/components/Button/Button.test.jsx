@@ -8,7 +8,7 @@ it("Should render the button", () => {
   expect(container).toMatchSnapshot();
 });
 it("Should display the button with the text - next", () => {
-  render(<Button buttonText="Next" />);
+  render(<Button label="Next" />);
   const paragraph1 = screen.getByText(/Next/i);
   expect(paragraph1).toBeInTheDocument();
 });

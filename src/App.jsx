@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import GameInstructions from "./components/GameInstructions/GameInstructions";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import LevelSelect from "./pages/LevelSelect/LevelSelect";
-import LogIn from "./pages/Login/Login";
+import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import StatsPage from "./pages/Stats/Stats";
 import StoryContainer from "./pages/StoryContainer/StoryContainer";
@@ -14,14 +14,16 @@ import "./styles/main.scss";
 const App = () => (
   <Routes>
     {/* PUBLIC ROUTES */}
-    <Route path="/login" element={<LogIn />} />
+    <Route path="/login" element={<Login />} />
     <Route path="/registration" element={<Registration />} />
 
     {/* PROTECTED ROUTES */}
     <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/swing-game" element={<SwingGamePlay />} />
+
+    <Route path="/swing-game" element={<LevelSelect gameName="Swing Game" />} />
+    <Route path="/swing-game/play" element={<SwingGamePlay />} />
+
     <Route path="/story-container" element={<StoryContainer />} />
-    <Route path="/level-select" element={<LevelSelect />} />
     <Route path="/stats-page" element={<StatsPage />} />
 
     {/* ISSUES */}

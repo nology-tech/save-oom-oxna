@@ -1,24 +1,9 @@
 import "./Button.scss";
 
-const Button = ({
-  buttonText,
-  buttonStyle,
-  onClickEvent,
-  type,
-  name,
-  onSubmit,
-}) => {
-  return (
-    <button
-      className={buttonStyle}
-      onClick={onClickEvent}
-      type={type}
-      name={name}
-      onSubmit={onSubmit}
-    >
-      {buttonText}
-    </button>
-  );
-};
+const Button = ({ label, className, onClick, type, name }) => (
+  <button className={className} onClick={onClick} type={type} name={name}>
+    {label}
+  </button>
+);
 
 export default Button;

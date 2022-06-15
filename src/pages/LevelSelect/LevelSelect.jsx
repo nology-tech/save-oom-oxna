@@ -3,22 +3,22 @@ import LevelSelectCard from "../../components/LevelSelectCard/LevelSelectCard";
 import levelSelectData from "../../data/levelSelectData";
 import "./LevelSelect.scss";
 
-const LevelSelect = () => {
+const LevelSelect = ({ gameName }) => {
   return (
     <Layout>
       <div className="level-select">
-        <h1 className="level-select__heading">Levels</h1>
+        <h1 className="level-select__heading">{gameName} Levels</h1>
         <div className="level-select__container">
-          {levelSelectData.map((card) => (
+          {levelSelectData.map((level) => (
             <LevelSelectCard
-              key={card.heading}
-              headingText={card.heading}
-              paragraphText={card.paragraph}
-              headingImg={card.headingImg}
-              buttonText={card.buttonText}
-              buttonStyle={card.buttonStyle}
-              isLocked={card.isLocked}
-              path={card.path}
+              key={level.heading}
+              heading={level.heading}
+              isLocked={level.isLocked}
+              headingImg={level.headingImg}
+              paragraph={level.paragraph}
+              buttonLabel={level.buttonLabel}
+              buttonClassName={level.buttonClassName}
+              path={level.path}
             />
           ))}
         </div>

@@ -15,15 +15,12 @@ const GameEnd = ({ score, childName }) => {
         <AvatarHeading avatarHeadingText={"Amazing effort " + childName} />
         <div className="game-end__buttons">
           <Link to="/level-select">
-            <Button
-              buttonStyle={"button-primary"}
-              buttonText={"Back to Home"}
-            />
+            <Button className={"button-primary"} label={"Back to Home"} />
           </Link>
           <Button
-            buttonStyle={"button-primary"}
-            buttonText={"Play Again"}
-            onClickEvent={refreshPage}
+            className={"button-primary"}
+            label={"Play Again"}
+            onClick={refreshPage}
           />
         </div>
         <p className="game-end__score">No. of correct sounds: {score}</p>
