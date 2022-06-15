@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import GameInstructions from "./components/GameInstructions/GameInstructions";
-import LevelSelectCardContainer from "./containers/LevelSelectCardContainer/LevelSelectCardContainer";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import LevelSelect from "./pages/LevelSelect/LevelSelect";
 import LogIn from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import StatsPage from "./pages/Stats/Stats";
@@ -18,10 +18,10 @@ const App = () => (
     <Route path="/registration" element={<Registration />} />
 
     {/* PROTECTED ROUTES */}
-    <Route path="/swing-game" element={<SwingGamePlay />} />
     <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/swing-game" element={<SwingGamePlay />} />
     <Route path="/story-container" element={<StoryContainer />} />
-    <Route path="/level-select" element={<LevelSelectCardContainer />} />
+    <Route path="/level-select" element={<LevelSelect />} />
     <Route path="/stats-page" element={<StatsPage />} />
 
     {/* ISSUES */}

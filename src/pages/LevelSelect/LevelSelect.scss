@@ -1,16 +1,14 @@
-@use "../../styles/variables" as *;
-
-.levels {
+.level-select {
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
 
-  &__heading {
+  .level-select__heading {
     font-size: 3.5rem;
     margin-left: 2rem;
   }
 
-  &__card-container {
+  .level-select__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
