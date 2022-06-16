@@ -15,7 +15,9 @@ const useTimer = (time) => {
     } else {
       clearInterval(interval);
     }
-    return () => clearInterval(interval);
+    return () => {
+      if (interval) return clearInterval(interval);
+    };
   }, []);
 
   return [seconds <= 0, seconds];
