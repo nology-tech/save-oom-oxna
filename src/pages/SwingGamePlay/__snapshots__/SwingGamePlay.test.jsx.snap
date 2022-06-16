@@ -76,7 +76,7 @@ exports[`Should render the SwingGamePlay page 1`] = `
         class="swing-game-play"
       >
         <p>
-          Nothing!
+          Loading...
         </p>
       </div>
     </main>
