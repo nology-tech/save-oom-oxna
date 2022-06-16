@@ -13,7 +13,7 @@ const StoryContainer = () => {
 
   const handleIncrement = () => {
     if (counter > 4) {
-      navigate("/level-select");
+      navigate("/swing-game/play");
     } else {
       setCounter(counter + 1);
     }
@@ -23,11 +23,7 @@ const StoryContainer = () => {
     <Layout>
       <div className="story__container">
         <StoryIntro text={storyData[counter].story} />
-        <Button
-          className={"button-primary"}
-          label={"NEXT"}
-          onClick={handleIncrement}
-        />
+        <Button label={"NEXT"} onClick={handleIncrement} />
       </div>
     </Layout>
   );

@@ -62,7 +62,7 @@ exports[`Should render the SwingGamePlay page 1`] = `
         <h2 />
       </div>
       <button
-        class="button-logout"
+        class="button button--secondary"
       >
         Logout
       </button>

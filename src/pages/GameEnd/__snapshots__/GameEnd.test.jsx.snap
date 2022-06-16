@@ -24,16 +24,16 @@ exports[`Should render the GameEnd page 1`] = `
         class="game-end__buttons"
       >
         <a
-          href="/level-select"
+          href="/dashboard"
         >
           <button
-            class="button-primary"
+            class="button"
           >
             Back to Home
           </button>
         </a>
         <button
-          class="button-primary"
+          class="button button--secondary"
         >
           Play Again
         </button>

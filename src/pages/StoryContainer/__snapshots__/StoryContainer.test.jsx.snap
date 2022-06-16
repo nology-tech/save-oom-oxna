@@ -62,7 +62,7 @@ exports[`Should render the StoryContainer page 1`] = `
         <h2 />
       </div>
       <button
-        class="button-logout"
+        class="button button--secondary"
       >
         Logout
       </button>
@@ -83,7 +83,7 @@ exports[`Should render the StoryContainer page 1`] = `
           </p>
         </div>
         <button
-          class="button-primary"
+          class="button"
         >
           NEXT
         </button>

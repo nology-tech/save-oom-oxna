@@ -69,11 +69,7 @@ const Registration = () => {
             onChangeEvent={handleUpdatePassword}
             inputType="password"
           />
-          <Button
-            label="Create your account"
-            className="button-secondary"
-            type="submit"
-          />
+          <Button label="Create your account" type="submit" />
           <p className="registration__bottom-text">
             Already have an account?{" "}
             <Link to="/" className="registration__log-in-link">

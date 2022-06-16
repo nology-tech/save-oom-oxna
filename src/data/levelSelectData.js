@@ -8,7 +8,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "GET STARTED",
-    buttonClassName: "button-secondary",
+    buttonIsSecondary: false,
     path: "/story-container",
   },
   {
@@ -18,7 +18,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "/swing-game/play",
   },
   {
@@ -28,7 +28,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -38,7 +38,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -48,7 +48,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -58,7 +58,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -68,7 +68,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -78,7 +78,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
   {
@@ -88,7 +88,7 @@ const levelSelectData = [
     paragraph:
       "Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.",
     buttonLabel: "LET’S PLAY",
-    buttonClassName: "button-levels",
+    buttonIsSecondary: true,
     path: "",
   },
 ];

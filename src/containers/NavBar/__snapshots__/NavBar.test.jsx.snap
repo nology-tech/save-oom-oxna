@@ -59,7 +59,7 @@ exports[`Should render the navbar 1`] = `
       <h2 />
     </div>
     <button
-      class="button-logout"
+      class="button button--secondary"
     >
       Logout
     </button>

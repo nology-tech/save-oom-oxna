@@ -47,7 +47,7 @@ const NavBar = () => {
         </Link>
         <h2>{user.name}</h2>
       </div>
-      <Button className="button-logout" onClick={handleLogout} label="Logout" />
+      <Button onClick={handleLogout} label="Logout" isSecondary />
     </nav>
   );
 };

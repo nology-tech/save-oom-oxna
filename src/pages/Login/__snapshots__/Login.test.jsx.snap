@@ -55,7 +55,7 @@ exports[`Should render the Login page 1`] = `
             />
           </div>
           <button
-            class="button-secondary"
+            class="button"
             type="submit"
           >
             Log in

@@ -8,9 +8,9 @@ const LevelSelectCard = ({
   headingImg,
   paragraph,
   buttonLabel,
-  buttonClassName,
   isLocked,
   path,
+  buttonIsSecondary,
 }) => {
   return (
     <div className="level-select-card">
@@ -23,7 +23,7 @@ const LevelSelectCard = ({
       <p className="level-select-card__text">{paragraph}</p>
       <div className="level-select-card__button">
         <Link to={path}>
-          <Button className={buttonClassName} label={buttonLabel} />
+          <Button label={buttonLabel} isSecondary={buttonIsSecondary} />
         </Link>
       </div>
     </div>

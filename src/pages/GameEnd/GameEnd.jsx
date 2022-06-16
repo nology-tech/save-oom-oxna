@@ -5,7 +5,7 @@ import "./GameEnd.scss";
 
 const GameEnd = ({ score, childName }) => {
   const refreshPage = () => {
-    window.location.reload(false);
+    window.location.reload();
   };
 
   return (
@@ -14,14 +14,10 @@ const GameEnd = ({ score, childName }) => {
         <p className="game-end__timer">Time&apos;s up</p>
         <AvatarHeading avatarHeadingText={"Amazing effort " + childName} />
         <div className="game-end__buttons">
-          <Link to="/level-select">
-            <Button className={"button-primary"} label={"Back to Home"} />
+          <Link to="/dashboard">
+            <Button label={"Back to Home"} />
           </Link>
-          <Button
-            className={"button-primary"}
-            label={"Play Again"}
-            onClick={refreshPage}
-          />
+          <Button label={"Play Again"} onClick={refreshPage} isSecondary />
         </div>
         <p className="game-end__score">No. of correct sounds: {score}</p>
       </div>

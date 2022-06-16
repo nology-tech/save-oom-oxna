@@ -23,7 +23,7 @@ const GameInstructions = () => {
         </li>
         <li>If the child needs help, click the squirrel to hear the sound</li>
       </ul>
-      <Button label={"LET'S PLAY"} className={"button-primary"} />
+      <Button label={"LET'S PLAY"} />
     </div>
   );
 };

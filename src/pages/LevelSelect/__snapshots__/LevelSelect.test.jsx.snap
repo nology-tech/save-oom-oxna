@@ -62,7 +62,7 @@ exports[`Should render the LevelSelect page 1`] = `
         <h2 />
       </div>
       <button
-        class="button-logout"
+        class="button button--secondary"
       >
         Logout
       </button>
@@ -105,7 +105,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/story-container"
               >
                 <button
-                  class="button-secondary"
+                  class="button"
                 >
                   GET STARTED
                 </button>
@@ -141,7 +141,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/swing-game/play"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -177,7 +177,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -213,7 +213,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -249,7 +249,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -285,7 +285,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -321,7 +321,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -357,7 +357,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
@@ -393,7 +393,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/"
               >
                 <button
-                  class="button-levels"
+                  class="button button--secondary"
                 >
                   LET’S PLAY
                 </button>
