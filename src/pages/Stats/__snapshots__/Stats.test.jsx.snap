@@ -59,7 +59,9 @@ exports[`Should render the Stats page 1`] = `
             </h2>
           </div>
         </a>
-        <h2 />
+        <h2>
+          Barry
+        </h2>
       </div>
       <button
         class="button button--secondary"
@@ -82,7 +84,7 @@ exports[`Should render the Stats page 1`] = `
             <h1
               class="dropdown-heading"
             >
-              Stats for Jack
+              Stats for Barry
             </h1>
           </div>
           <div

@@ -56,7 +56,9 @@ exports[`Should render the navbar 1`] = `
           </h2>
         </div>
       </a>
-      <h2 />
+      <h2>
+        Barry
+      </h2>
     </div>
     <button
       class="button button--secondary"

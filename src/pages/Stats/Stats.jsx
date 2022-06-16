@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import Graph from "../../components/Graph/Graph";
 import Layout from "../../components/Layout/Layout";
+import UserContext from "../../context/UserContext";
 import "./Stats.scss";
 
 const StatsPage = () => {
+  const { user } = useContext(UserContext);
+
   return (
     <Layout>
       <section className="stats-page">
         <div className="stats-page__top-line">
           <AvatarHeading
-            avatarHeadingText="Stats for Jack"
+            avatarHeadingText={`Stats for ${user.name}`}
             headingStyle="dropdown-heading"
           />
           <div className="stats-page__buttons">
