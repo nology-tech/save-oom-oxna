@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import GameInstructions from "./GameInstructions";
+import { customRender } from "../../utils/testUtils";
 
 it("Should render the game instructions", () => {
-  render(<GameInstructions />);
+  customRender(<GameInstructions />);
 
   const paragraph1 = screen.getByRole("text");
 

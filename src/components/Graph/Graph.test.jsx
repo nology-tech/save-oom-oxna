@@ -1,9 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import Graph from "./Graph";
+import { customRender } from "../../utils/testUtils";
 
 it("Should render the Dropdown", () => {
   //1. Arrange
-  render(<Graph />);
+  customRender(<Graph />);
 
   //2. Act
   const graph = screen.getByRole("graph");

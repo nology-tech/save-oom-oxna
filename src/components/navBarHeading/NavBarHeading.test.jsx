@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import VectorLock from "../../assets/images/Vectorlock.png";
 import { customRender } from "../../utils/testUtils";
 import NavBarHeading from "./NavBarHeading";
@@ -16,7 +16,7 @@ it("Should render the navbar header", () => {
 });
 
 it("Should contain the navbar heading", () => {
-  render(<NavBarHeading headingText={"Heading"} />);
+  customRender(<NavBarHeading headingText={"Heading"} />);
   const navHeading = screen.getByText(/Heading/i);
   expect(navHeading).toBeInTheDocument();
 });
