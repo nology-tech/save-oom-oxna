@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import useTimer from "../../hooks/useTimer";
 import "./Timer.scss";
 
 const Timer = ({ startTime, handleGameEnd }) => {
-  const [counter, setCounter] = useState(startTime);
-  counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  if (counter == 0) {
-    handleGameEnd();
-  }
+  const [isFinished, counter] = useTimer(startTime);
+
+  useEffect(() => {
+    if (isFinished) {
+      handleGameEnd();
+    }
+  }, [isFinished]);
 
   return (
     <h1 className="timer">
