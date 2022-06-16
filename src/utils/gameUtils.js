@@ -1,12 +1,21 @@
-import phonicsData from "../data/phonicsData";
 import {
   getArrayOfRounds,
-  // getGameRoundsForUser,
   getCorrectGameRoundsForUser,
   getIncorrectGameRoundsForUser,
-} from "./firebaseGameUtils";
+} from "../api/gameService";
+import phonicsData from "../data/phonicsData";
 
-// const staticPhonicsArray = Object.keys(phonicsData.levelOne);
+const getLevelData = (level) => {
+  if (!level) return null;
+
+  return {
+    1: "levelOne",
+    2: "levelTwo",
+    3: "levelThree",
+    4: "levelFour",
+    5: "levelFive",
+  }[level];
+};
 
 /**
  * Get a list of phonics from the static array, based on the level.
@@ -14,24 +23,7 @@ import {
  * @returns
  */
 const getStaticPhonicsArray = (level) => {
-  let levelData = null;
-  switch (level) {
-    case 1:
-      levelData = "levelOne";
-      break;
-    case 2:
-      levelData = "levelTwo";
-      break;
-    case 3:
-      levelData = "levelThree";
-      break;
-    case 4:
-      levelData = "levelFour";
-      break;
-    case 5:
-      levelData = "levelFive";
-      break;
-  }
+  const levelData = getLevelData(level);
   return Object.keys(phonicsData[levelData]);
 };
 

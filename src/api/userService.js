@@ -4,10 +4,9 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import initialUser from "../context/InitialUserContext";
 import { db } from "../firebase";
-import { getUserById } from "../utils/firebaseGameUtils";
 
 // logs user out, resets user context
 export const userLogout = async (setUser) => {
@@ -63,4 +62,14 @@ export const registerUser = async (userData) => {
     console.error(`Error code: ${code}. Error message: ${message}`);
     return false;
   }
+};
+
+/**
+ * Gets a user object using the userId.
+ * @param {*} userId
+ * @returns
+ */
+const getUserById = async (userId) => {
+  const docRef = doc(db, "users", userId);
+  return await getDoc(docRef);
 };

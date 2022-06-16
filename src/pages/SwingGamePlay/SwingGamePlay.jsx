@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import shortid from "shortid";
+import { saveUserRound } from "../../api/gameService";
 import swingingOom from "../../assets/images/Group 146swingingOom.png";
 import squirrel from "../../assets/images/squirrel.png";
 import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
@@ -10,7 +10,6 @@ import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/Valida
 import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
 import UserContext from "../../context/UserContext";
 import phonicsData from "../../data/phonicsData";
-import { saveUserRound } from "../../utils/firebaseGameUtils";
 import { getArrayForSwing } from "../../utils/gameUtils";
 import GameEnd from "../GameEnd/GameEnd";
 import "./SwingGamePlay.scss";
@@ -86,17 +85,14 @@ const SwingGamePlay = () => {
     }
   };
 
-  const handleHint = () => {
-    let newGameState = { ...gameState };
+  // TODO: stop sound playing multiple times
+  // TODO: allow multiple squirrel animations to be trigger
+  const handleHint = async () => {
     setHintAnimation(true);
-    newGameState.isCorrect = null;
-    console.log(newGameState.isCorrect);
-    newGameState.counter = newGameState.counter + 1;
-    let audio = new Audio(
-      phonicsData.levelOne[phonicsArray[gameState.index]].soundUrl
-    );
-    audio.play();
-    setGameState(newGameState);
+
+    const phonic = phonicsArray[gameState.index];
+    const phonicSound = await phonicsData.levelOne[phonic].sound();
+    new Audio(phonicSound).play();
   };
 
   const handleIndexChange = () => {
@@ -112,12 +108,6 @@ const SwingGamePlay = () => {
     newGameState.isGameOver = true;
     setGameState(newGameState);
     console.log(newGameState, gameState, "handleGameEnd");
-  };
-
-  const getId = () => {
-    const id = shortid.generate();
-    console.log(id);
-    return id;
   };
 
   const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
@@ -144,7 +134,6 @@ const SwingGamePlay = () => {
             </div>
             <div onClick={handleHint}>
               <AnimatedImage
-                key={getId()}
                 imageToAnimate={squirrel}
                 animationClass={"animate__animated.animate__fastest"}
                 animationType={` ${squirrelAnimationType2}`}
@@ -152,7 +141,6 @@ const SwingGamePlay = () => {
               />
             </div>
             <AnimatedImage
-              key={getId()}
               imageToAnimate={swingingOom}
               animationClass={"animate__animated.animate__fastest"}
               animationType={oomAnimationType}
