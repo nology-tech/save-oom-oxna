@@ -66,8 +66,6 @@ export const getArrayForSwing = async (id, level) => {
   const game = "swing";
 
   const staticArray = getStaticPhonicsArray(level);
-  console.log(`static array for level ${level}`, staticArray);
-
   const incorrect = await getArrayOfRounds(
     id,
     game,
@@ -75,31 +73,26 @@ export const getArrayForSwing = async (id, level) => {
   );
   const correct = await getArrayOfRounds(id, game, getCorrectGameRoundsForUser);
 
-  console.log("correct", correct);
-  console.log("incorrect", incorrect);
-
   // all results
   const result = new Set();
 
   // add in at most MAX_INCORRECT_PER_GAME of incorrect answers
-  for (let phonic of incorrect) {
+  for (const phonic of incorrect) {
     result.add(phonic);
     if (result.length >= MAX_INCORRECT_PER_GAME) {
       console.log("Break!! Reach max incorrect");
       break;
     }
   }
-  console.log("After adding incorrect", result);
 
-  let maxCorrect = result.length + MAX_CORRECT_PER_GAME;
+  const maxCorrect = result.length + MAX_CORRECT_PER_GAME;
   // add in at most MAX_CORRECT_PER_GAME of correct answers
-  for (let phonic of correct) {
+  for (const phonic of correct) {
     result.add(phonic);
     if (result.length >= maxCorrect) {
       break;
     }
   }
-  console.log("After adding correct", result);
 
   // fill up remaining
   for (let i = 0; i < staticArray.length; i++) {

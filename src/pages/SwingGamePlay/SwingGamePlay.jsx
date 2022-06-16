@@ -14,72 +14,50 @@ import { getArrayForSwing } from "../../utils/gameUtils";
 import GameEnd from "../GameEnd/GameEnd";
 import "./SwingGamePlay.scss";
 
-let gameScore = 0;
 const SwingGamePlay = () => {
-  const game = "swing";
-  // should become props?
-  const level = 1;
-
-  let currentUserName = "";
-  let currentUserId = 0;
-  try {
-    const { user } = useContext(UserContext);
-    currentUserName = user.name;
-    currentUserId = user.userId;
-  } catch (e) {
-    console.error("Error attempting to get userContext!", e);
-  }
-
   const [gameState, setGameState] = useState({
     score: 0,
     index: 0,
     isCorrect: false,
-    isGameOver: false,
-    isGameReady: false,
-    counter: 0,
   });
-
   const [hintAnimation, setHintAnimation] = useState(false);
   const [phonicsArray, setPhonicsArray] = useState([]);
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // load up the Phonics array
-  useEffect(() => {
-    getArrayForSwing(currentUserId, 1)
-      .then((array) => {
-        let newGameState = { ...gameState };
-        newGameState.isGameReady = true;
-        setGameState(newGameState);
-        setPhonicsArray(array);
-      })
-      .catch((e) => console.error("Error attempting to load phonics array", e));
-  }, []);
+  const { user } = useContext(UserContext);
 
-  const handleAnswer = async (correct) => {
-    const currentPhonic = phonicsArray[gameState.index];
-    let newGameState = { ...gameState };
-    newGameState.isCorrect = correct;
+  // load up the phonics array
+  useEffect(async () => {
+    if (!user.userId) return;
+
+    const array = await getArrayForSwing(user.userId, 1);
+    setPhonicsArray(array);
+    setIsLoaded(true);
+  }, [user.userId]);
+
+  const handleAnswer = async (isCorrect) => {
     setHintAnimation(false);
+    const currentPhonic = phonicsArray[gameState.index];
 
-    if (correct) {
-      newGameState.score = newGameState.score + 1;
-      gameScore = newGameState.score;
-      newGameState.counter = newGameState.counter + 1;
-      newGameState.index = handleIndexChange();
-    } else {
-      newGameState.index = newGameState.index + 1;
-    }
-    setGameState(newGameState);
+    const score = gameState.score + (isCorrect ? 1 : 0);
+    const index = handleIndexChange();
 
-    // save game results
+    setGameState({
+      score,
+      isCorrect,
+      index,
+    });
+
     try {
       await saveUserRound(
-        currentUserId,
-        game,
-        level,
-        newGameState,
+        user.userId,
+        "swing",
+        1,
+        { isCorrect, score },
         currentPhonic
       );
-      console.log(`Saved user round - ${correct ? "" : "in"}correct!`);
+      console.log(`Saved user round - ${isCorrect ? "" : "in"}correct!`);
     } catch (e) {
       console.error("Error attempting to save a user's round");
     }
@@ -96,65 +74,65 @@ const SwingGamePlay = () => {
   };
 
   const handleIndexChange = () => {
-    if (gameState.index < phonicsArray.length) {
-      return gameState.index + 1;
-    } else {
-      return 0;
-    }
+    return gameState.index < phonicsArray.length ? gameState.index + 1 : 0;
   };
 
   const handleGameEnd = () => {
-    let newGameState = { ...gameState };
-    newGameState.isGameOver = true;
-    setGameState(newGameState);
-    console.log(newGameState, gameState, "handleGameEnd");
+    setIsGameOver(true);
   };
 
   const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
   const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
 
-  const gameNotAvailable = !gameState.isGameReady || gameState.isGameOver;
-  const gameNotAvailableJsx = gameState.isGameOver ? (
-    <GameEnd score={gameScore} childName={currentUserName} />
-  ) : gameState.isGameReady == false ? (
-    <p>Nothing!</p>
-  ) : null;
+  if (!isLoaded) {
+    return (
+      <Layout>
+        <div className="swing-game-play">
+          <p>Loading...</p>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (isGameOver) {
+    return (
+      <Layout>
+        <div className="swing-game-play">
+          <GameEnd score={gameState.score} childName={user.name} />
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
       <div className="swing-game-play">
-        {gameNotAvailable ? (
-          gameNotAvailableJsx
-        ) : (
-          <>
-            <OomsNeedsContainer />
-            <div className="swing-game-play__phonic">
-              <Timer startTime={60} handleGameEnd={handleGameEnd} />
-              <PhonicComponent phonicText={phonicsArray[gameState.index]} />
-            </div>
-            <div onClick={handleHint}>
-              <AnimatedImage
-                imageToAnimate={squirrel}
-                animationClass={"animate__animated.animate__fastest"}
-                animationType={` ${squirrelAnimationType2}`}
-                imageStylesClass={"swing-game-play__squirrel"}
-              />
-            </div>
-            <AnimatedImage
-              imageToAnimate={swingingOom}
-              animationClass={"animate__animated.animate__fastest"}
-              animationType={oomAnimationType}
-              imageStylesClass={"swing-game-play__oom"}
-            />
-            <ValidateAnswerButtons
-              handleCorrect={() => handleAnswer(true)}
-              handleIncorrect={() => handleAnswer(false)}
-            />
-            <p className="swing-game-play__score">
-              Number Of Correct Sounds: {gameState.score}
-            </p>
-          </>
-        )}
+        <OomsNeedsContainer />
+        <div className="swing-game-play__phonic">
+          <Timer startTime={60} handleGameEnd={handleGameEnd} />
+          <PhonicComponent phonicText={phonicsArray[gameState.index]} />
+        </div>
+        <div onClick={handleHint}>
+          <AnimatedImage
+            imageToAnimate={squirrel}
+            animationClass={"animate__animated.animate__fastest"}
+            animationType={` ${squirrelAnimationType2}`}
+            imageStylesClass={"swing-game-play__squirrel"}
+          />
+        </div>
+        <AnimatedImage
+          imageToAnimate={swingingOom}
+          animationClass={"animate__animated.animate__fastest"}
+          animationType={oomAnimationType}
+          imageStylesClass={"swing-game-play__oom"}
+        />
+        <ValidateAnswerButtons
+          handleCorrect={() => handleAnswer(true)}
+          handleIncorrect={() => handleAnswer(false)}
+        />
+        <p className="swing-game-play__score">
+          Number Of Correct Sounds: {gameState.score}
+        </p>
       </div>
     </Layout>
   );

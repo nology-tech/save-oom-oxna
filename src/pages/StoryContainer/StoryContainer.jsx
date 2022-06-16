@@ -9,7 +9,7 @@ import Layout from "../../components/Layout/Layout";
 
 const StoryContainer = () => {
   const [counter, setCounter] = useState(0);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleIncrement = () => {
     if (counter > 4) {
