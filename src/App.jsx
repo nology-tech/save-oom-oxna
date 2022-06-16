@@ -20,10 +20,8 @@ const App = () => (
 
     {/* PROTECTED ROUTES */}
     <Route path="/dashboard" element={<Dashboard />} />
-
     <Route path="/swing-game" element={<LevelSelect gameName="Swing Game" />} />
     <Route path="/swing-game/play" element={<SwingGamePlay />} />
-
     <Route path="/story-container" element={<StoryContainer />} />
     <Route path="/stats-page" element={<StatsPage />} />
 
