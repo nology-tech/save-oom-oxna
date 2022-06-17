@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the Game End screen 1`] = `
+exports[`Should render the GameEnd page 1`] = `
 <div>
   <div
     class="game-end"
@@ -13,27 +13,23 @@ exports[`Should render the Game End screen 1`] = `
       >
         Time's up
       </p>
-      <div
-        class="avatar-heading"
-      >
-        <h1>
-          Amazing effort undefined
-        </h1>
-      </div>
+      <h1>
+        Amazing effort 
+      </h1>
       <div
         class="game-end__buttons"
       >
         <a
-          href="/level-select-card-container"
+          href="/dashboard"
         >
           <button
-            class="button-primary"
+            class="button"
           >
             Back to Home
           </button>
         </a>
         <button
-          class="button-primary"
+          class="button button--secondary"
         >
           Play Again
         </button>

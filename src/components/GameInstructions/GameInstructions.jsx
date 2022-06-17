@@ -3,12 +3,12 @@ import "./GameInstructions.scss";
 
 const GameInstructions = () => {
   return (
-    <div className="gameInstructions" role="text">
-      <h1 className="gameInstructions__heading">HOW TO PLAY</h1>
-      <ul className="gameInstructions__text">
+    <div className="game-instructions">
+      <h1 className="game-instructions__heading">HOW TO PLAY</h1>
+      <ul className="game-instructions__list">
         <li>
-          A phoneme will appear on the screeen and the child will have to say
-          the sound of the phoneme shown
+          A phoneme will appear on the screen and the child will have to say the
+          sound of the phoneme shown
         </li>
         <li>
           If the sound is said correctly, click the green button at the bottom
@@ -23,11 +23,7 @@ const GameInstructions = () => {
         </li>
         <li>If the child needs help, click the squirrel to hear the sound</li>
       </ul>
-      <Button
-        buttonText={"LET'S PLAY"}
-        buttonStyle={"button-primary"}
-        className="gameInstructions__button"
-      />
+      <Button label={"LET'S PLAY"} />
     </div>
   );
 };

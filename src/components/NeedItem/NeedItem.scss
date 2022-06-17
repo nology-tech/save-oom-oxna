@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.ooms-needs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  .ooms-needs__percentage {
+    color: $color-white;
+    font-family: $font-secondary;
+  }
+}

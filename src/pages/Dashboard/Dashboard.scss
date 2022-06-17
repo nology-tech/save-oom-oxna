@@ -1,0 +1,22 @@
+.dashboard {
+  background-image: url(../../assets/images/Dashboard-Background-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+
+  .dashboard__heading {
+    display: inline-block;
+    margin: 2rem;
+    width: 100%;
+  }
+
+  .dashboard__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: max-content;
+  }
+}

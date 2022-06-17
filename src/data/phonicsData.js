@@ -1,120 +1,124 @@
-// Phonics data for Level1
+const getSound = async (letter, level = 1) => {
+  const sound = await import(`../assets/sounds/${letter}_${level}.mp3`);
+  return sound.default;
+};
+
 const phonics = {
   levelOne: {
     s: {
       phonics: "s",
       text: "as in 'sat'",
-      soundUrl: "./assets/sounds/s_1.mp3",
+      sound: () => getSound("s", 1),
     },
     a: {
       phonics: "a",
       text: "as in 'ant'",
-      soundUrl: "./assets/sounds/a_1.mp3",
+      sound: () => getSound("a", 1),
     },
     t: {
       phonics: "t",
       text: "as in 'tap'",
-      soundUrl: "./assets/sounds/t_1.mp3",
+      sound: () => getSound("t", 1),
     },
     p: {
       phonics: "p",
       text: "as in 'pat'",
-      soundUrl: "./assets/sounds/p_1.mp3",
+      sound: () => getSound("p", 1),
     },
     i: {
       phonics: "i",
       text: "as in 'ink'",
-      soundUrl: "./assets/sounds/i_1.mp3",
+      sound: () => getSound("i", 1),
     },
     n: {
       phonics: "n",
       text: "as in 'nap'",
-      soundUrl: "./assets/sounds/n_1.mp3",
+      sound: () => getSound("n", 1),
     },
     m: {
       phonics: "m",
       text: "as in 'mud'",
-      soundUrl: "./assets/sounds/m_1.mp3",
+      sound: () => getSound("m", 1),
     },
     d: {
       phonics: "d",
       text: "as in 'dog'",
-      soundUrl: "./assets/sounds/d_1.mp3",
+      sound: () => getSound("d", 1),
     },
     g: {
       phonics: "g",
       text: "as in 'gap'",
-      soundUrl: "./assets/sounds/g_1.mp3",
+      sound: () => getSound("g", 1),
     },
     o: {
       phonics: "s",
       text: "as in 'on'",
-      soundUrl: "./assets/sounds/o_1.mp3",
+      sound: () => getSound("o", 1),
     },
     c: {
       phonics: "c",
       text: "as in 'cat'",
-      soundUrl: "./assets/sounds/c_1.mp3",
+      sound: () => getSound("c", 1),
     },
     k: {
       phonics: "k",
       text: "as in 'kit'",
-      soundUrl: "./assets/sounds/k_1.mp3",
+      sound: () => getSound("k", 1),
     },
     ck: {
       phonics: "ck",
       text: "as in 'pick'",
-      soundUrl: "./assets/sounds/ck_1.mp3",
+      sound: () => getSound("ck", 1),
     },
     u: {
       phonics: "u",
       text: "as in 'up'",
-      soundUrl: "./assets/sounds/u_1.mp3",
+      sound: () => getSound("u", 1),
     },
     e: {
       phonics: "e",
       text: "as in 'egg'",
-      soundUrl: "./assets/sounds/e_1.mp3",
+      sound: () => getSound("e", 1),
     },
     r: {
       phonics: "r",
       text: "as in 'rat'",
-      soundUrl: "./assets/sounds/r_1.mp3",
+      sound: () => getSound("r", 1),
     },
     h: {
       phonics: "h",
       text: "as in 'hot'",
-      soundUrl: "./assets/sounds/h_1.mp3",
+      sound: () => getSound("h", 1),
     },
     b: {
       phonics: "b",
       text: "as in 'big'",
-      soundUrl: "./assets/sounds/b_1.mp3",
+      sound: () => getSound("b", 1),
     },
     f: {
       phonics: "f",
       text: "as in 'fox'",
-      soundUrl: "./assets/sounds/f_1.mp3",
+      sound: () => getSound("f", 1),
     },
     ff: {
       phonics: "ff",
       text: "as in 'puff'",
-      soundUrl: "./assets/sounds/ff_1.mp3",
+      sound: () => getSound("ff", 1),
     },
     l: {
       phonics: "l",
       text: "as in 'lid'",
-      soundUrl: "./assets/sounds/l_1.mp3",
+      sound: () => getSound("l", 1),
     },
     ll: {
       phonics: "ll",
       text: "as in 'bell'",
-      soundUrl: "./assets/sounds/ll_1.mp3",
+      sound: () => getSound("ll", 1),
     },
     ss: {
       phonics: "ss",
       text: "as in 'dress'",
-      soundUrl: "./assets/sounds/ss_1.mp3",
+      sound: () => getSound("ss", 1),
     },
   },
 };

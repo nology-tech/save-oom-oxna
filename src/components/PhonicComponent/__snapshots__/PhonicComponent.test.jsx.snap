@@ -5,11 +5,11 @@ exports[`Should render the phonic header 1`] = `
   <div
     class="phonic-component"
   >
-    <h1
-      class="phonic-component__heading"
+    <p
+      class="phonic-component__text"
     >
       test
-    </h1>
+    </p>
   </div>
 </div>
 `;

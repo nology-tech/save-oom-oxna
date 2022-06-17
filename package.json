@@ -10,7 +10,6 @@
     "react-google-charts": "^4.0.0",
     "react-router-dom": "^6.3.0",
     "sass": "^1.46.0",
-    "shortid": "^2.2.16",
     "web-vitals": "^2.1.3"
   },
   "overrides": {
@@ -28,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --detectOpenHandles",
+    "test": "react-scripts test --forceExit",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "format": "prettier --write ."

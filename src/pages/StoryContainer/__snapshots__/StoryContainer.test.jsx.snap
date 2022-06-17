@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the StoryContainer page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div>
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="logo.png"
+          />
+        </a>
+        <a
+          class="navbar-link"
+          href="/swing-game"
+        >
+          Swing Game
+        </a>
+        <a
+          class="navbar-link"
+          href="/dashboard"
+        >
+          Dashboard
+        </a>
+        <a
+          class="navbar-link"
+          href="/stats-page"
+        >
+          Stats
+        </a>
+        <h2>
+          Barry
+        </h2>
+      </div>
+      <button
+        class="button button--secondary"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="story-container"
+      >
+        <p
+          class="story-container__text"
+        >
+          Once upon a time, there was an Alien, whose name was Oom. Oom lived in Space, on planet XXXX.Oom was very excited because when aliens turn 5, they get to fly spaceships for the very first time. Can you see Oom waving? Say Hello to Oom!!
+        </p>
+        <button
+          class="button"
+        >
+          NEXT
+        </button>
+      </div>
+    </main>
+  </div>
+</div>
+`;

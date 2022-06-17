@@ -1,0 +1,15 @@
+@use "../../styles/variables.scss" as *;
+
+.button-round-container {
+  background: $color-validation-button-background;
+  border-radius: 4.6rem;
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  width: 6.6rem;
+  height: 3.5rem;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}

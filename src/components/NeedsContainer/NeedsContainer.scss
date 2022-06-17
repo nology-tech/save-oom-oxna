@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.needs-container {
+  background: $color-validation-button-background;
+  width: min-content;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-left: auto;
+  padding: 0.25rem 1rem;
+  border-radius: 4rem;
+}

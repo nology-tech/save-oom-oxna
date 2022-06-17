@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the navbar 1`] = `
+<div>
+  <nav
+    class="nav-bar"
+  >
+    <div>
+      <a
+        href="/dashboard"
+      >
+        <img
+          alt="logo"
+          class="logo"
+          src="logo.png"
+        />
+      </a>
+      <a
+        class="navbar-link"
+        href="/swing-game"
+      >
+        Swing Game
+      </a>
+      <a
+        class="navbar-link"
+        href="/dashboard"
+      >
+        Dashboard
+      </a>
+      <a
+        class="navbar-link"
+        href="/stats-page"
+      >
+        Stats
+      </a>
+      <h2>
+        Barry
+      </h2>
+    </div>
+    <button
+      class="button button--secondary"
+    >
+      Logout
+    </button>
+  </nav>
+</div>
+`;

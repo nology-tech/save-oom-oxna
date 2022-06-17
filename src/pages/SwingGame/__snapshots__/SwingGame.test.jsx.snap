@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the SwingGame page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div>
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="logo.png"
+          />
+        </a>
+        <a
+          class="navbar-link"
+          href="/swing-game"
+        >
+          Swing Game
+        </a>
+        <a
+          class="navbar-link"
+          href="/dashboard"
+        >
+          Dashboard
+        </a>
+        <a
+          class="navbar-link"
+          href="/stats-page"
+        >
+          Stats
+        </a>
+        <h2>
+          Barry
+        </h2>
+      </div>
+      <button
+        class="button button--secondary"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="swing-game"
+      >
+        <p>
+          Loading...
+        </p>
+      </div>
+    </main>
+  </div>
+</div>
+`;

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Login page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <div
+        class="login"
+      >
+        <img
+          alt="logo"
+          class="logo"
+          src="logo.png"
+        />
+        <form
+          class="login__form"
+        >
+          <h1
+            class="login__heading"
+          >
+            Welcome!
+          </h1>
+          <div
+            class="text-input"
+          >
+            <label
+              class="text-input__label"
+            >
+              Email
+            </label>
+            <input
+              class="text-input__input"
+              required=""
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="text-input"
+          >
+            <label
+              class="text-input__label"
+            >
+              Password
+            </label>
+            <input
+              class="text-input__input"
+              required=""
+              type="password"
+              value=""
+            />
+          </div>
+          <button
+            class="button"
+            type="submit"
+          >
+            Log in
+          </button>
+          <p
+            class="login__bottom-text"
+          >
+            Don't have an Account?
+             
+            <a
+              class="login__registration-link"
+              href="/registration"
+            >
+              Sign Up
+            </a>
+          </p>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+`;

@@ -1,12 +1,21 @@
-import phonicsData from "../data/phonicsData";
 import {
   getArrayOfRounds,
-  // getGameRoundsForUser,
   getCorrectGameRoundsForUser,
   getIncorrectGameRoundsForUser,
-} from "./firebaseGameUtils";
+} from "../api/gameService";
+import phonicsData from "../data/phonicsData";
 
-// const staticPhonicsArray = Object.keys(phonicsData.levelOne);
+const getLevelData = (level) => {
+  if (!level) return null;
+
+  return {
+    1: "levelOne",
+    2: "levelTwo",
+    3: "levelThree",
+    4: "levelFour",
+    5: "levelFive",
+  }[level];
+};
 
 /**
  * Get a list of phonics from the static array, based on the level.
@@ -14,24 +23,7 @@ import {
  * @returns
  */
 const getStaticPhonicsArray = (level) => {
-  let levelData = null;
-  switch (level) {
-    case 1:
-      levelData = "levelOne";
-      break;
-    case 2:
-      levelData = "levelTwo";
-      break;
-    case 3:
-      levelData = "levelThree";
-      break;
-    case 4:
-      levelData = "levelFour";
-      break;
-    case 5:
-      levelData = "levelFive";
-      break;
-  }
+  const levelData = getLevelData(level);
   return Object.keys(phonicsData[levelData]);
 };
 
@@ -74,8 +66,6 @@ export const getArrayForSwing = async (id, level) => {
   const game = "swing";
 
   const staticArray = getStaticPhonicsArray(level);
-  console.log(`static array for level ${level}`, staticArray);
-
   const incorrect = await getArrayOfRounds(
     id,
     game,
@@ -83,31 +73,26 @@ export const getArrayForSwing = async (id, level) => {
   );
   const correct = await getArrayOfRounds(id, game, getCorrectGameRoundsForUser);
 
-  console.log("correct", correct);
-  console.log("incorrect", incorrect);
-
   // all results
   const result = new Set();
 
   // add in at most MAX_INCORRECT_PER_GAME of incorrect answers
-  for (let phonic of incorrect) {
+  for (const phonic of incorrect) {
     result.add(phonic);
     if (result.length >= MAX_INCORRECT_PER_GAME) {
       console.log("Break!! Reach max incorrect");
       break;
     }
   }
-  console.log("After adding incorrect", result);
 
-  let maxCorrect = result.length + MAX_CORRECT_PER_GAME;
+  const maxCorrect = result.length + MAX_CORRECT_PER_GAME;
   // add in at most MAX_CORRECT_PER_GAME of correct answers
-  for (let phonic of correct) {
+  for (const phonic of correct) {
     result.add(phonic);
     if (result.length >= maxCorrect) {
       break;
     }
   }
-  console.log("After adding correct", result);
 
   // fill up remaining
   for (let i = 0; i < staticArray.length; i++) {

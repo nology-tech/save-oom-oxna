@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the navbar link 1`] = `
+<div>
+  <a
+    class="navbar-link"
+    href="/test"
+  >
+    heading
+  </a>
+</div>
+`;

@@ -1,0 +1,9 @@
+@use "../../styles/variables" as *;
+
+.navbar-link {
+  font-family: $font-primary;
+  color: $color-accent;
+  display: block;
+  margin-bottom: 1.5rem;
+  text-decoration-color: $color-underline;
+}

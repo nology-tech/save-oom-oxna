@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the button 1`] = `
+<div>
+  <div
+    class="button-round-container"
+  >
+    <button
+      aria-label="cross"
+      class="button-round"
+    >
+      <img
+        alt="cross"
+        src="Cross.png"
+      />
+    </button>
+    <button
+      aria-label="tick"
+      class="button-round button-round--tick"
+    >
+      <img
+        alt="tick"
+        src="Tick.png"
+      />
+    </button>
+  </div>
+</div>
+`;

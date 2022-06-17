@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Registration page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <div
+        class="registration"
+      >
+        <img
+          alt="logo"
+          class="logo"
+          src="logo.png"
+        />
+        <form
+          class="registration__form"
+        >
+          <h1
+            class="registration__heading"
+          >
+            Create your account
+          </h1>
+          <div
+            class="text-input"
+          >
+            <label
+              class="text-input__label"
+            >
+              Child Name
+            </label>
+            <input
+              class="text-input__input"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="text-input"
+          >
+            <label
+              class="text-input__label"
+            >
+              Email Address
+            </label>
+            <input
+              class="text-input__input"
+              required=""
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="text-input"
+          >
+            <label
+              class="text-input__label"
+            >
+              Password
+            </label>
+            <input
+              class="text-input__input"
+              required=""
+              type="password"
+              value=""
+            />
+          </div>
+          <button
+            class="button"
+            type="submit"
+          >
+            Create your account
+          </button>
+          <p
+            class="registration__bottom-text"
+          >
+            Already have an account?
+             
+            <a
+              class="registration__log-in-link"
+              href="/"
+            >
+              Sign in
+            </a>
+          </p>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+`;

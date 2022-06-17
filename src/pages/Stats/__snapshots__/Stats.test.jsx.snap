@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the Stats page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div>
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="logo.png"
+          />
+        </a>
+        <a
+          class="navbar-link"
+          href="/swing-game"
+        >
+          Swing Game
+        </a>
+        <a
+          class="navbar-link"
+          href="/dashboard"
+        >
+          Dashboard
+        </a>
+        <a
+          class="navbar-link"
+          href="/stats-page"
+        >
+          Stats
+        </a>
+        <h2>
+          Barry
+        </h2>
+      </div>
+      <button
+        class="button button--secondary"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <section
+        class="stats-page"
+      >
+        <div
+          class="stats-page__top-line"
+        >
+          <h1>
+            Stats for 
+            Barry
+          </h1>
+          <div
+            class="stats-page__buttons"
+          >
+            <span>
+              Dropdown #1
+            </span>
+            <span>
+              Dropdown #2
+            </span>
+          </div>
+        </div>
+        <div
+          class="stats-page__container"
+        >
+          <div
+            class="stats-page__score-graph"
+          >
+            <h2>
+              Score Over Time
+            </h2>
+          </div>
+          <div
+            class="stats-page__correct-phonemes"
+          >
+            <h2>
+              Correct Phonemes
+            </h2>
+            <ul>
+              <li>
+                SH
+              </li>
+              <li>
+                EE
+              </li>
+              <li>
+                P
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+`;

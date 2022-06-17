@@ -1,10 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { customRender } from "../../utils/testUtils";
 import TextInput from "./TextInput";
 
 it("Should render the input box", () => {
   //1. Arrange
-  render(<TextInput />);
+  customRender(<TextInput />);
 
   //2. Act
   const input = screen.getByRole("textbox");
@@ -15,7 +16,7 @@ it("Should render the input box", () => {
 
 it("Should render the input box label", () => {
   //1. Arrange
-  render(<TextInput labelText={"Name"} type={"text"} />);
+  customRender(<TextInput labelText={"Name"} type={"text"} />);
 
   //2. Act
   const labelText = screen.queryByText(/Name/i);
@@ -26,7 +27,7 @@ it("Should render the input box label", () => {
 
 it("Should render the input box containing 'Steadmond'", () => {
   //1. Arrange
-  render(<TextInput />);
+  customRender(<TextInput />);
 
   //2. Act
   const input = screen.getByRole("textbox");

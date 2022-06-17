@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import { customRender } from "../../utils/testUtils";
 import Timer from "./Timer";
 
 it("Should render the timer", () => {
-  render(<Timer startTime={60} />);
+  customRender(<Timer startTime={60} />);
 
   const timer = screen.getByRole("heading");
 

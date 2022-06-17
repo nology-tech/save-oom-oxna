@@ -1,0 +1,18 @@
+.level-select {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+
+  .level-select__heading {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .level-select__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    padding: 2rem;
+    gap: 3rem;
+    width: 100%;
+  }
+}

@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
+import lockImage from "../../assets/images/Vectorlock.png";
 import Button from "../Button/Button";
-import NavBarHeading from "../NavBarHeading/NavBarHeading";
 import "./LevelSelectCard.scss";
 
 const LevelSelectCard = ({
-  headingText,
-  headingImg,
-  paragraphText,
-  buttonText,
-  buttonStyle,
+  heading,
+  paragraph,
+  buttonLabel,
   isLocked,
-  path,
+  linkTo,
 }) => {
   return (
     <div className="level-select-card">
-      <NavBarHeading
-        headingText={headingText}
-        headingImg={headingImg}
-        headingStyle={"level-select"}
-        isLocked={isLocked}
-      />
-      {/* <h3 className='card__heading'>{headingText}</h3> */}
-      <p className="level-select-card__text">{paragraphText}</p>
+      <div className="level-select-card__heading">
+        <h2 className="level-select-card__heading-text">{heading}</h2>
+        {isLocked && (
+          <img
+            className="level-select-card__img"
+            src={lockImage}
+            alt={heading}
+          />
+        )}
+      </div>
+      <p className="level-select-card__text">{paragraph}</p>
       <div className="level-select-card__button">
-        <Link to={path}>
-          <Button buttonStyle={buttonStyle} buttonText={buttonText} />
+        <Link to={linkTo}>
+          <Button label={buttonLabel} isSecondary={isLocked} />
         </Link>
       </div>
     </div>

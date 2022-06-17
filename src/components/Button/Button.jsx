@@ -1,22 +1,11 @@
 import "./Button.scss";
 
-const Button = ({
-  buttonText,
-  buttonStyle,
-  onClickEvent,
-  type,
-  name,
-  onSubmit,
-}) => {
+const Button = ({ label, type, onClick, isSecondary, name }) => {
+  const className = `button${isSecondary ? " button--secondary" : ""}`;
+
   return (
-    <button
-      className={buttonStyle}
-      onClick={onClickEvent}
-      type={type}
-      name={name}
-      onSubmit={onSubmit}
-    >
-      {buttonText}
+    <button className={className} onClick={onClick} type={type} name={name}>
+      {label}
     </button>
   );
 };

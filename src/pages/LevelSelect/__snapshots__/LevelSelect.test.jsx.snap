@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render the LevelSelect page 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <nav
+      class="nav-bar"
+    >
+      <div>
+        <a
+          href="/dashboard"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="logo.png"
+          />
+        </a>
+        <a
+          class="navbar-link"
+          href="/swing-game"
+        >
+          Swing Game
+        </a>
+        <a
+          class="navbar-link"
+          href="/dashboard"
+        >
+          Dashboard
+        </a>
+        <a
+          class="navbar-link"
+          href="/stats-page"
+        >
+          Stats
+        </a>
+        <h2>
+          Barry
+        </h2>
+      </div>
+      <button
+        class="button button--secondary"
+      >
+        Logout
+      </button>
+    </nav>
+    <main
+      class="layout__main"
+    >
+      <div
+        class="level-select"
+      >
+        <h1
+          class="level-select__heading"
+        >
+           Levels
+        </h1>
+        <div
+          class="level-select__container"
+        >
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                INTRODUCTION
+              </h2>
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/story-container"
+              >
+                <button
+                  class="button"
+                >
+                  GET STARTED
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 1
+              </h2>
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/swing-game/play"
+              >
+                <button
+                  class="button"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 2
+              </h2>
+              <img
+                alt="LEVEL 2"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 3
+              </h2>
+              <img
+                alt="LEVEL 3"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 4
+              </h2>
+              <img
+                alt="LEVEL 4"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 5
+              </h2>
+              <img
+                alt="LEVEL 5"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 6
+              </h2>
+              <img
+                alt="LEVEL 6"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 7
+              </h2>
+              <img
+                alt="LEVEL 7"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="level-select-card"
+          >
+            <div
+              class="level-select-card__heading"
+            >
+              <h2
+                class="level-select-card__heading-text"
+              >
+                LEVEL 8
+              </h2>
+              <img
+                alt="LEVEL 8"
+                class="level-select-card__img"
+                src="Vectorlock.png"
+              />
+            </div>
+            <p
+              class="level-select-card__text"
+            >
+              Egestas facilisis tempor, quis viverra auctor sed sem condimentum. Donec sit tempus ac sit parturient eget imperdiet amet, neque.
+            </p>
+            <div
+              class="level-select-card__button"
+            >
+              <a
+                href="/"
+              >
+                <button
+                  class="button button--secondary"
+                >
+                  LET’S PLAY
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

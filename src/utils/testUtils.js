@@ -1,11 +1,12 @@
 import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import UserContext from "../contexts/UserContext";
+import UserContext from "../context/UserContext";
+import mockUser from "../data/mock/mockUser";
 
 export const customRender = (
   ui,
   useRouting = true,
-  contextOptions = { useContext: true, value: undefined }
+  contextOptions = { useContext: true, value: { user: mockUser } }
 ) => {
   // wrap components in routing and context if requested
   const routingUiResult = useRouting && wrapWithRouting(ui);

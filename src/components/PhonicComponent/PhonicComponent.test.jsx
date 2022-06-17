@@ -1,10 +1,10 @@
-import { render, screen } from "@testing-library/react";
-import PhonicComponent from "./PhonicComponent";
+import { screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
+import PhonicComponent from "./PhonicComponent";
 
 it("Should render the heading text 's'", () => {
   //1. Arrange
-  render(<PhonicComponent phonicText={"s"} />);
+  customRender(<PhonicComponent phonicText={"s"} />);
 
   //2. Act
   const headingText = screen.queryByText("s");
@@ -19,7 +19,7 @@ it("Should render the phonic header", () => {
 });
 
 it("Should contain the phonic heading", () => {
-  render(<PhonicComponent phonicText={"test"} />);
+  customRender(<PhonicComponent phonicText={"test"} />);
   const phonicHeading = screen.getByText(/test/i);
   expect(phonicHeading).toBeInTheDocument();
 });

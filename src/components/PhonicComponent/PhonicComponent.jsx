@@ -1,11 +1,9 @@
-import React from "react";
 import "./PhonicComponent.scss";
 
-const PhonicComponent = ({ phonicText }) => {
-  return (
-    <div className="phonic-component">
-      <h1 className="phonic-component__heading">{phonicText}</h1>
-    </div>
-  );
-};
+const PhonicComponent = ({ phonicText }) => (
+  <div className="phonic-component">
+    <p className="phonic-component__text">{phonicText}</p>
+  </div>
+);
+
 export default PhonicComponent;
