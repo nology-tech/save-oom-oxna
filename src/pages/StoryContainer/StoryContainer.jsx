@@ -3,9 +3,8 @@ import "./StoryContainer.scss";
 
 import { useState } from "react";
 import Button from "../../components/Button/Button";
-import StoryIntro from "../../components/StoryIntro/StoryIntro";
-import storyData from "../../data/storyData";
 import Layout from "../../components/Layout/Layout";
+import storyData from "../../data/storyData";
 
 const StoryContainer = () => {
   const [counter, setCounter] = useState(0);
@@ -21,8 +20,8 @@ const StoryContainer = () => {
 
   return (
     <Layout>
-      <div className="story__container">
-        <StoryIntro text={storyData[counter].story} />
+      <div className="story-container">
+        <p className="story-container__text">{storyData[counter].story}</p>
         <Button label={"NEXT"} onClick={handleIncrement} />
       </div>
     </Layout>

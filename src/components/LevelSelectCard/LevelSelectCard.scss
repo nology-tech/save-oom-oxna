@@ -3,23 +3,31 @@
 .level-select-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   background-color: $color-secondary-light;
-  padding: 1rem;
-  min-height: 17rem;
-  max-height: 30rem;
-  max-width: 25rem;
-  place-self: center;
+  padding: 1rem 2rem;
 
-  &__heading {
-    color: $color-white;
+  .level-select-card__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .level-select-card__heading-text {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    .level-select-card__img {
+      height: 1.3rem;
+      width: 1.1rem;
+    }
   }
 
-  &__text {
+  .level-select-card__text {
     color: $color-accent;
+    margin-bottom: 1.5rem;
   }
 
-  &__button {
+  .level-select-card__button {
     align-self: center;
   }
 }

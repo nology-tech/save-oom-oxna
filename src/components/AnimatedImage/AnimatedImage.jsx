@@ -1,5 +1,3 @@
-import "./AnimatedImage.scss";
-
 const AnimatedImage = ({
   imageToAnimate,
   animationClass,

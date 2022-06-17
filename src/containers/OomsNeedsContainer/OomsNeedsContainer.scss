@@ -1,22 +1,13 @@
 @use "../../styles/variables" as *;
 
-.oomsneeds-container {
-  top: 1%;
+.ooms-needs-container {
   position: relative;
-  width: 9rem;
-  height: 2rem;
-  left: 70%;
   background: $color-validation-button-background;
-  border-radius: 4rem;
+  width: min-content;
   display: flex;
   justify-content: space-evenly;
-}
-
-@media screen and (min-width: 1100px) {
-  .needs-container {
-    position: absolute;
-    left: 74%;
-    width: 25rem;
-    height: 5rem;
-  }
+  gap: 1rem;
+  margin-left: auto;
+  padding: 0.25rem 1rem;
+  border-radius: 4rem;
 }

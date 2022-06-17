@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AvatarHeading from "../../components/AvatarHeading/AvatarHeading";
 import Button from "../../components/Button/Button";
 import "./GameEnd.scss";
 
@@ -12,7 +11,7 @@ const GameEnd = ({ score, childName }) => {
     <div className="game-end">
       <div className="game-end__top">
         <p className="game-end__timer">Time&apos;s up</p>
-        <AvatarHeading avatarHeadingText={"Amazing effort " + childName} />
+        <h1>Amazing effort {childName}</h1>
         <div className="game-end__buttons">
           <Link to="/dashboard">
             <Button label={"Back to Home"} />

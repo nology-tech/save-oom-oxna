@@ -1,11 +1,8 @@
-import { screen } from "@testing-library/react";
-import GameInstructions from "./GameInstructions";
 import { customRender } from "../../utils/testUtils";
+import GameInstructions from "./GameInstructions";
 
 it("Should render the game instructions", () => {
-  customRender(<GameInstructions />);
+  const { container } = customRender(<GameInstructions />);
 
-  const paragraph1 = screen.getByRole("text");
-
-  expect(paragraph1).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });

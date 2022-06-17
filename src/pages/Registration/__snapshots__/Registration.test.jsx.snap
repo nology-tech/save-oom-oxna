@@ -12,8 +12,8 @@ exports[`Should render the Registration page 1`] = `
         class="registration"
       >
         <img
-          alt="Logo image"
-          class="logo__image"
+          alt="logo"
+          class="logo"
           src="logo.png"
         />
         <form

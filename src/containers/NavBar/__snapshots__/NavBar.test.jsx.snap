@@ -5,56 +5,33 @@ exports[`Should render the navbar 1`] = `
   <nav
     class="nav-bar"
   >
-    <div
-      class="nav-bar__section"
-    >
+    <div>
       <a
         href="/dashboard"
       >
         <img
-          alt="Logo image"
-          class="logo__image"
+          alt="logo"
+          class="logo"
           src="logo.png"
         />
       </a>
       <a
+        class="navbar-link"
         href="/swing-game"
       >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Swing Game
-          </h2>
-        </div>
+        Swing Game
       </a>
       <a
+        class="navbar-link"
         href="/dashboard"
       >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Dashboard
-          </h2>
-        </div>
+        Dashboard
       </a>
       <a
+        class="navbar-link"
         href="/stats-page"
       >
-        <div
-          class="nav-bar-header"
-        >
-          <h2
-            class="nav-bar-header__heading"
-          >
-            Stats
-          </h2>
-        </div>
+        Stats
       </a>
       <h2>
         Barry

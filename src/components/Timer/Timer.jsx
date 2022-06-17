@@ -2,19 +2,19 @@ import { useEffect } from "react";
 import useTimer from "../../hooks/useTimer";
 import "./Timer.scss";
 
-const Timer = ({ startTime, handleGameEnd }) => {
+const Timer = ({ startTime, onTimeUp }) => {
   const [isFinished, counter] = useTimer(startTime);
 
   useEffect(() => {
     if (isFinished) {
-      handleGameEnd();
+      onTimeUp();
     }
   }, [isFinished]);
 
   return (
     <h1 className="timer">
       {counter}
-      <span className="timer__s">s</span>
+      <span className="timer__seconds">s</span>
     </h1>
   );
 };

@@ -17,8 +17,7 @@ const LevelSelect = ({ gameName }) => {
               headingImg={level.headingImg}
               paragraph={level.paragraph}
               buttonLabel={level.buttonLabel}
-              buttonIsSecondary={level.buttonIsSecondary}
-              path={level.path}
+              linkTo={level.linkTo}
             />
           ))}
         </div>

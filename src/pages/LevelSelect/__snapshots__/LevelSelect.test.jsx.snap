@@ -8,56 +8,33 @@ exports[`Should render the LevelSelect page 1`] = `
     <nav
       class="nav-bar"
     >
-      <div
-        class="nav-bar__section"
-      >
+      <div>
         <a
           href="/dashboard"
         >
           <img
-            alt="Logo image"
-            class="logo__image"
+            alt="logo"
+            class="logo"
             src="logo.png"
           />
         </a>
         <a
+          class="navbar-link"
           href="/swing-game"
         >
-          <div
-            class="nav-bar-header"
-          >
-            <h2
-              class="nav-bar-header__heading"
-            >
-              Swing Game
-            </h2>
-          </div>
+          Swing Game
         </a>
         <a
+          class="navbar-link"
           href="/dashboard"
         >
-          <div
-            class="nav-bar-header"
-          >
-            <h2
-              class="nav-bar-header__heading"
-            >
-              Dashboard
-            </h2>
-          </div>
+          Dashboard
         </a>
         <a
+          class="navbar-link"
           href="/stats-page"
         >
-          <div
-            class="nav-bar-header"
-          >
-            <h2
-              class="nav-bar-header__heading"
-            >
-              Stats
-            </h2>
-          </div>
+          Stats
         </a>
         <h2>
           Barry
@@ -87,10 +64,10 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 INTRODUCTION
               </h2>
@@ -118,18 +95,13 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 1
               </h2>
-              <img
-                alt="LEVEL 1"
-                class="level-select-header__img"
-                src="Vectorlock.png"
-              />
             </div>
             <p
               class="level-select-card__text"
@@ -143,7 +115,7 @@ exports[`Should render the LevelSelect page 1`] = `
                 href="/swing-game/play"
               >
                 <button
-                  class="button button--secondary"
+                  class="button"
                 >
                   LET’S PLAY
                 </button>
@@ -154,16 +126,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 2
               </h2>
               <img
                 alt="LEVEL 2"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -190,16 +162,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 3
               </h2>
               <img
                 alt="LEVEL 3"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -226,16 +198,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 4
               </h2>
               <img
                 alt="LEVEL 4"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -262,16 +234,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 5
               </h2>
               <img
                 alt="LEVEL 5"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -298,16 +270,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 6
               </h2>
               <img
                 alt="LEVEL 6"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -334,16 +306,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 7
               </h2>
               <img
                 alt="LEVEL 7"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>
@@ -370,16 +342,16 @@ exports[`Should render the LevelSelect page 1`] = `
             class="level-select-card"
           >
             <div
-              class="level-select-header"
+              class="level-select-card__heading"
             >
               <h2
-                class="level-select-header__heading"
+                class="level-select-card__heading-text"
               >
                 LEVEL 8
               </h2>
               <img
                 alt="LEVEL 8"
-                class="level-select-header__img"
+                class="level-select-card__img"
                 src="Vectorlock.png"
               />
             </div>

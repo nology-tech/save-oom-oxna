@@ -6,7 +6,7 @@ import "./OomsNeedsContainer.scss";
 
 const OomsNeedsContainer = () => {
   return (
-    <div className="oomsneeds-container">
+    <div className="ooms-needs-container">
       <OomsNeeds oomsNeed={battery0} percentage={0} />
       <OomsNeeds oomsNeed={smiley} percentage={90} />
       <OomsNeeds oomsNeed={battery20} percentage={20} />

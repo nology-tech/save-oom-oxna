@@ -12,15 +12,16 @@ import UserContext from "../../context/UserContext";
 import phonicsData from "../../data/phonicsData";
 import { getArrayForSwing } from "../../utils/gameUtils";
 import GameEnd from "../GameEnd/GameEnd";
-import "./SwingGamePlay.scss";
+import "./SwingGame.scss";
 
-const SwingGamePlay = () => {
+const SwingGamePage = () => {
   const [gameState, setGameState] = useState({
     score: 0,
     index: 0,
     isCorrect: false,
   });
-  const [hintAnimation, setHintAnimation] = useState(false);
+  const [hintAnimation, setHintAnimation] = useState("");
+  const [oomAnimation, setOomAnimation] = useState("");
   const [phonicsArray, setPhonicsArray] = useState([]);
   const [isGameOver, setIsGameOver] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,16 +31,33 @@ const SwingGamePlay = () => {
   // load up the phonics array
   useEffect(async () => {
     if (!user.userId) return;
-
     const array = await getArrayForSwing(user.userId, 1);
     setPhonicsArray(array);
     setIsLoaded(true);
   }, [user.userId]);
 
+  // adds animate class to squirrel, removes after 3 seconds
+  const triggerHintAnimation = () => {
+    setHintAnimation("animate__bounce");
+    setInterval(() => {
+      setHintAnimation("");
+    }, 3000);
+  };
+
+  // adds animate class to oom, removes after 8 seconds
+  const triggerOomAnimation = () => {
+    setOomAnimation("animate__swinging");
+    setInterval(() => {
+      setOomAnimation("");
+    }, 8000);
+  };
+
   const handleAnswer = async (isCorrect) => {
     setHintAnimation(false);
+    if (isCorrect) {
+      triggerOomAnimation();
+    }
     const currentPhonic = phonicsArray[gameState.index];
-
     const score = gameState.score + (isCorrect ? 1 : 0);
     const index = handleIndexChange();
 
@@ -64,13 +82,12 @@ const SwingGamePlay = () => {
   };
 
   // TODO: stop sound playing multiple times
-  // TODO: allow multiple squirrel animations to be trigger
   const handleHint = async () => {
-    setHintAnimation(true);
-
-    const phonic = phonicsArray[gameState.index];
-    const phonicSound = await phonicsData.levelOne[phonic].sound();
+    const currentPhonic = phonicsArray[gameState.index];
+    const phonicSound = await phonicsData.levelOne[currentPhonic].sound();
     new Audio(phonicSound).play();
+
+    triggerHintAnimation();
   };
 
   const handleIndexChange = () => {
@@ -81,13 +98,10 @@ const SwingGamePlay = () => {
     setIsGameOver(true);
   };
 
-  const squirrelAnimationType2 = hintAnimation ? "animate__bounce" : "";
-  const oomAnimationType = gameState.isCorrect ? "animate__swinging" : "";
-
   if (!isLoaded) {
     return (
       <Layout>
-        <div className="swing-game-play">
+        <div className="swing-game">
           <p>Loading...</p>
         </div>
       </Layout>
@@ -97,7 +111,7 @@ const SwingGamePlay = () => {
   if (isGameOver) {
     return (
       <Layout>
-        <div className="swing-game-play">
+        <div className="swing-game">
           <GameEnd score={gameState.score} childName={user.name} />
         </div>
       </Layout>
@@ -106,31 +120,31 @@ const SwingGamePlay = () => {
 
   return (
     <Layout>
-      <div className="swing-game-play">
+      <div className="swing-game">
         <OomsNeedsContainer />
-        <div className="swing-game-play__phonic">
-          <Timer startTime={60} handleGameEnd={handleGameEnd} />
+        <div className="swing-game__phonic">
+          <Timer startTime={6000} onTimeUp={handleGameEnd} />
           <PhonicComponent phonicText={phonicsArray[gameState.index]} />
         </div>
         <div onClick={handleHint}>
           <AnimatedImage
             imageToAnimate={squirrel}
-            animationClass={"animate__animated.animate__fastest"}
-            animationType={` ${squirrelAnimationType2}`}
-            imageStylesClass={"swing-game-play__squirrel"}
+            animationClass="animate__animated.animate__fastest"
+            animationType={hintAnimation}
+            imageStylesClass="swing-game__squirrel"
           />
         </div>
         <AnimatedImage
           imageToAnimate={swingingOom}
-          animationClass={"animate__animated.animate__fastest"}
-          animationType={oomAnimationType}
-          imageStylesClass={"swing-game-play__oom"}
+          animationClass="animate__animated.animate__fastest"
+          animationType={oomAnimation}
+          imageStylesClass="swing-game__oom"
         />
         <ValidateAnswerButtons
           handleCorrect={() => handleAnswer(true)}
           handleIncorrect={() => handleAnswer(false)}
         />
-        <p className="swing-game-play__score">
+        <p className="swing-game__score">
           Number Of Correct Sounds: {gameState.score}
         </p>
       </div>
@@ -138,4 +152,4 @@ const SwingGamePlay = () => {
   );
 };
 
-export default SwingGamePlay;
+export default SwingGamePage;

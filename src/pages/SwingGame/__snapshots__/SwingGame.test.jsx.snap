@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render the StoryContainer page 1`] = `
+exports[`Should render the SwingGame page 1`] = `
 <div>
   <div
     class="layout"
@@ -50,18 +50,11 @@ exports[`Should render the StoryContainer page 1`] = `
       class="layout__main"
     >
       <div
-        class="story-container"
+        class="swing-game"
       >
-        <p
-          class="story-container__text"
-        >
-          Once upon a time, there was an Alien, whose name was Oom. Oom lived in Space, on planet XXXX.Oom was very excited because when aliens turn 5, they get to fly spaceships for the very first time. Can you see Oom waving? Say Hello to Oom!!
+        <p>
+          Loading...
         </p>
-        <button
-          class="button"
-        >
-          NEXT
-        </button>
       </div>
     </main>
   </div>

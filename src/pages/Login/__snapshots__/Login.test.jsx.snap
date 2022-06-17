@@ -12,8 +12,8 @@ exports[`Should render the Login page 1`] = `
         class="login"
       >
         <img
-          alt="Logo image"
-          class="logo__image"
+          alt="logo"
+          class="logo"
           src="logo.png"
         />
         <form
