@@ -67,56 +67,36 @@ exports[`Should render the Dashboard page 1`] = `
               alt="Energy Level"
               src="Smiley.svg"
             />
-            <div>
-              <h2>
-                Energy Level
-              </h2>
-              <p>
-                This is OOM's current energy level. Take regular breaks from playing to allow OOM to recover.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img
-              alt="Energy Level"
-              src="Battery-20.svg"
-            />
-            <div>
-              <h2>
-                Energy Level
-              </h2>
-              <p>
-                This is Oom's current energy level. Take regular breaks from playing to allow OOM to recover.
-              </p>
-            </div>
+            <h2>
+              Energy Level
+            </h2>
+            <p>
+              This is OOM's current energy level. Take regular breaks from playing to allow OOM to recover.
+            </p>
           </div>
           <div>
             <img
               alt="Fuel Level"
               src="Battery-20.svg"
             />
-            <div>
-              <h2>
-                Fuel Level
-              </h2>
-              <p>
-                Oom's spaceship lost all its fuel on its collision with earth. Re-fill this to a 100% to get oom safely back home!
-              </p>
-            </div>
+            <h2>
+              Fuel Level
+            </h2>
+            <p>
+              Oom's spaceship lost all its fuel on its collision with earth. Re-fill this to a 100% to get oom safely back home!
+            </p>
           </div>
           <div>
             <img
               alt="Health Level"
               src="Heart.svg"
             />
-            <div>
-              <h2>
-                Fuel Level
-              </h2>
-              <p>
-                This is Oom's health status. Gain more health to make Oom land safely on Earth.
-              </p>
-            </div>
+            <h2>
+              Fuel Level
+            </h2>
+            <p>
+              This is Oom's health status. Gain more health to make Oom land safely on Earth.
+            </p>
           </div>
         </div>
       </div>
