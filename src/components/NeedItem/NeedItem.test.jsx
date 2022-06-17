@@ -1,14 +1,14 @@
 import { screen } from "@testing-library/react";
 import { customRender } from "../../utils/testUtils";
-import OomsNeeds from "./OomsNeeds";
+import NeedItem from "./NeedItem";
 
 it("Should render the Ooms needs", () => {
-  const { container } = customRender(<OomsNeeds />);
+  const { container } = customRender(<NeedItem />);
   expect(container).toMatchSnapshot();
 });
 
 it("Should contain the percentage ", () => {
-  customRender(<OomsNeeds />);
+  customRender(<NeedItem />);
   const item = screen.getByText(/%/i);
   expect(item).toBeInTheDocument();
 });

@@ -3,11 +3,11 @@ import { saveUserRound } from "../../api/gameService";
 import swingingOom from "../../assets/images/Group 146swingingOom.png";
 import squirrel from "../../assets/images/squirrel.png";
 import AnimatedImage from "../../components/AnimatedImage/AnimatedImage";
+import ButtonRoundContainer from "../../components/ButtonRoundContainer/ButtonRoundContainer";
 import Layout from "../../components/Layout/Layout";
+import NeedsContainer from "../../components/NeedsContainer/NeedsContainer";
 import PhonicComponent from "../../components/PhonicComponent/PhonicComponent";
 import Timer from "../../components/Timer/Timer";
-import ValidateAnswerButtons from "../../components/ValidateAnswerButtons/ValidateAnswerButtons";
-import OomsNeedsContainer from "../../containers/OomsNeedsContainer/OomsNeedsContainer";
 import UserContext from "../../context/UserContext";
 import phonicsData from "../../data/phonicsData";
 import { getArrayForSwing } from "../../utils/gameUtils";
@@ -121,7 +121,7 @@ const SwingGamePage = () => {
   return (
     <Layout>
       <div className="swing-game">
-        <OomsNeedsContainer />
+        <NeedsContainer />
         <div className="swing-game__phonic">
           <Timer startTime={6000} onTimeUp={handleGameEnd} />
           <PhonicComponent phonicText={phonicsArray[gameState.index]} />
@@ -140,7 +140,7 @@ const SwingGamePage = () => {
           animationType={oomAnimation}
           imageStylesClass="swing-game__oom"
         />
-        <ValidateAnswerButtons
+        <ButtonRoundContainer
           handleCorrect={() => handleAnswer(true)}
           handleIncorrect={() => handleAnswer(false)}
         />

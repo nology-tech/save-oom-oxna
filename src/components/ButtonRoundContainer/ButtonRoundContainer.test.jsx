@@ -1,8 +1,8 @@
-import ValidateAnswerButtons from "./ValidateAnswerButtons";
+import ButtonRoundContainer from "./ButtonRoundContainer";
 import { customRender } from "../../utils/testUtils";
 
 it("Should render the button", () => {
-  const { container } = customRender(<ValidateAnswerButtons />);
+  const { container } = customRender(<ButtonRoundContainer />);
 
   expect(container).toMatchSnapshot();
 });

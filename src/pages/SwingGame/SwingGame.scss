@@ -4,6 +4,8 @@
   background-image: url(../../assets/images/GameBackground.png);
   background-size: 100% 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 
   .swing-game__phonic {
     display: flex;
@@ -32,7 +34,6 @@
     left: 65%;
     -webkit-animation-duration: 7s;
     animation-duration: 7s;
-    transform: rotate(20deg);
   }
 
   .swing-game__score {

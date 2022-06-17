@@ -3,10 +3,11 @@
 exports[`Should render the button 1`] = `
 <div>
   <div
-    class="validation"
+    class="button-round-container"
   >
     <button
-      class="validation__button validation__button--wrong"
+      aria-label="cross"
+      class="button-round"
     >
       <img
         alt="cross"
@@ -14,7 +15,8 @@ exports[`Should render the button 1`] = `
       />
     </button>
     <button
-      class="validation__button validation__button--right"
+      aria-label="tick"
+      class="button-round button-round--tick"
     >
       <img
         alt="tick"

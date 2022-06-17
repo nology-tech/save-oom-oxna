@@ -1,7 +1,7 @@
 import { customRender } from "../../utils/testUtils";
-import OomsNeedsContainer from "./OomsNeedsContainer";
+import NeedsContainer from "./NeedsContainer";
 
 it("Should render the Ooms need container", () => {
-  const { container } = customRender(<OomsNeedsContainer />);
+  const { container } = customRender(<NeedsContainer />);
   expect(container).toMatchSnapshot();
 });

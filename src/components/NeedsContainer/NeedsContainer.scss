@@ -1,7 +1,6 @@
 @use "../../styles/variables" as *;
 
-.ooms-needs-container {
-  position: relative;
+.needs-container {
   background: $color-validation-button-background;
   width: min-content;
   display: flex;

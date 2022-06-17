@@ -1,4 +1,4 @@
-import NavBar from "../../containers/NavBar/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import "./Layout.scss";
 
 const Layout = ({ showNavbar = true, children }) => {
