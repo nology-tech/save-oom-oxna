@@ -24,7 +24,7 @@ const NavBar = () => {
         </Link>
         <NavbarLink text={"Swing Game"} to="/swing-game" />
         <NavbarLink text={"Dashboard"} to="/dashboard" />
-        <NavbarLink text={"Stats"} to="stats-page" />
+        <NavbarLink text={"Stats"} to="/stats-page" />
         <h2>{user.name ?? "loading..."}</h2>
       </div>
       <Button onClick={handleLogout} label="Logout" isSecondary />
